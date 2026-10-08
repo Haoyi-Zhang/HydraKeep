@@ -89,6 +89,7 @@ def edit(page,fid,value:Any):
     if not loc.is_enabled() or loc.get_attribute('readonly') is not None:
         page.evaluate('(field)=>tx.emit("edit-blocked",{field})',fid);return
     kind=page.evaluate('(field)=>tx.fields().find(item=>item.id===field)?.control',fid)
+    action=page.evaluate('([field,requested])=>tx.beginEdit(field,requested)',[fid,value])
     if kind=='checkbox':
         (loc.check if value else loc.uncheck)()
     elif kind == 'select-one':
@@ -102,8 +103,7 @@ def edit(page,fid,value:Any):
         raise RuntimeError('Multiple select is outside this profile')
     else:
         loc.click();loc.press('ControlOrMeta+A');loc.press_sequentially(str(value))
-    page.evaluate('''([field,requested])=>tx.emit("edit",{
-      field,requested,trusted:tx.last[field]?.trusted===true})''',[fid,value])
+    page.evaluate('(action)=>tx.completeEdit(action)',action)
 
 
 def execute(browser,cfg,html,gap,order,rep,run):

@@ -14,7 +14,7 @@ consumer transactions to actual loopback receiver payloads.
   and the licensed external Next.js example with provenance;
 - `scripts/`: browser execution, isolated typed-matrix orchestration, analysis,
   compatibility checking, source recovery, figure generation, and paper audit;
-- `tests/`: 122 unit, finite-model, corruption-rejection, compatibility, and
+- `tests/`: 145 unit, finite-model, corruption-rejection, compatibility, and
   witness-minimality tests;
 - `results/`: canonical raw browser/receiver records, summaries, environments,
   generated model checks, witnesses, and structural audits;
