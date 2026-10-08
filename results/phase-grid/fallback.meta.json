@@ -1,0 +1,10 @@
+{
+  "runs": 304,
+  "wall_seconds": 101.14709402300014,
+  "statuses": {
+    "clean": 240,
+    "violation": 64
+  },
+  "receipts": 304,
+  "scope": "4 authored post-design unknown-effect controls; 38 schedules each; 2 repeats; not independent public applications"
+}

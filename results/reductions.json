@@ -1,0 +1,794 @@
+{
+  "wall_seconds": 10.196049567000045,
+  "witnesses": [
+    {
+      "case": "R01",
+      "horizon": "H",
+      "target_kind": "state-only-loss",
+      "target_phase": "hydrated",
+      "original_actions": [
+        "EDIT",
+        "noise",
+        "load",
+        "hydrate"
+      ],
+      "reduced_actions": [
+        "EDIT",
+        "load",
+        "hydrate"
+      ],
+      "original_edit": "toy-early",
+      "reduced_edit": "t",
+      "attempts": 6,
+      "final": {
+        "case": "R01",
+        "framework": "react",
+        "split": "development",
+        "horizon": "H",
+        "gap": 0,
+        "rep": 0,
+        "evidence_class": "offline-real-chromium",
+        "transport": "intent-and-serialization-only",
+        "trace": [
+          {
+            "seq": 0,
+            "ms": 83.89999999990687,
+            "type": "checkpoint",
+            "phase": "server-visible",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "seed",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": null
+          },
+          {
+            "seq": 1,
+            "ms": 137.5,
+            "type": "native-input",
+            "trusted": true,
+            "eventValue": "t",
+            "phase": "server-visible",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": null
+          },
+          {
+            "seq": 2,
+            "ms": 139.69999999995343,
+            "type": "edit-complete",
+            "requested": "t",
+            "phase": "server-visible",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": null
+          },
+          {
+            "seq": 3,
+            "ms": 175.69999999995343,
+            "type": "checkpoint",
+            "phase": "loaded",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": null
+          },
+          {
+            "seq": 4,
+            "ms": 184.80000000004657,
+            "type": "checkpoint",
+            "phase": "hydrated",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          },
+          {
+            "seq": 5,
+            "ms": 186.39999999990687,
+            "type": "checkpoint",
+            "phase": "hydrated",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          },
+          {
+            "seq": 6,
+            "ms": 222.0999999998603,
+            "type": "native-change",
+            "trusted": true,
+            "eventValue": "t",
+            "phase": "hydrated",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          },
+          {
+            "seq": 7,
+            "ms": 223.5,
+            "type": "application-intent",
+            "submittedValue": "seed",
+            "phase": "hydrated",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          },
+          {
+            "seq": 8,
+            "ms": 223.80000000004657,
+            "type": "native-serialization",
+            "serializedValue": "t",
+            "defaultPrevented": true,
+            "phase": "hydrated",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          },
+          {
+            "seq": 9,
+            "ms": 228.69999999995343,
+            "type": "checkpoint",
+            "phase": "hydrated",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          }
+        ],
+        "oracle": {
+          "status": "violation",
+          "failures": [
+            {
+              "kind": "state-only-loss",
+              "phase": "hydrated",
+              "seq": 7,
+              "expected": "t",
+              "actual": "seed"
+            }
+          ],
+          "inconclusive": [],
+          "accepted_edits": 1,
+          "blocked_edits": 0,
+          "intentional_replacements": 0
+        },
+        "console": [],
+        "page_errors": [],
+        "duration_ms": 277.97280200002206
+      },
+      "minimality": "deletion-1-minimal controller actions with edit and final submit retained; single-character nonempty string tested; not globally minimal JS/program input"
+    },
+    {
+      "case": "R01",
+      "horizon": "C",
+      "target_kind": "dom-loss",
+      "target_phase": "committed",
+      "original_actions": [
+        "EDIT",
+        "noise",
+        "load",
+        "hydrate",
+        "noise",
+        "commit"
+      ],
+      "reduced_actions": [
+        "EDIT",
+        "load",
+        "hydrate",
+        "commit"
+      ],
+      "original_edit": "toy-early",
+      "reduced_edit": "t",
+      "attempts": 10,
+      "final": {
+        "case": "R01",
+        "framework": "react",
+        "split": "development",
+        "horizon": "C",
+        "gap": 0,
+        "rep": 0,
+        "evidence_class": "offline-real-chromium",
+        "transport": "intent-and-serialization-only",
+        "trace": [
+          {
+            "seq": 0,
+            "ms": 75.80000000004657,
+            "type": "checkpoint",
+            "phase": "server-visible",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "seed",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": null
+          },
+          {
+            "seq": 1,
+            "ms": 129.30000000004657,
+            "type": "native-input",
+            "trusted": true,
+            "eventValue": "t",
+            "phase": "server-visible",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": null
+          },
+          {
+            "seq": 2,
+            "ms": 134.30000000004657,
+            "type": "edit-complete",
+            "requested": "t",
+            "phase": "server-visible",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": null
+          },
+          {
+            "seq": 3,
+            "ms": 170.5,
+            "type": "checkpoint",
+            "phase": "loaded",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": null
+          },
+          {
+            "seq": 4,
+            "ms": 179.19999999995343,
+            "type": "checkpoint",
+            "phase": "hydrated",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          },
+          {
+            "seq": 5,
+            "ms": 183.60000000009313,
+            "type": "checkpoint",
+            "phase": "committed",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "seed",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          },
+          {
+            "seq": 6,
+            "ms": 185,
+            "type": "checkpoint",
+            "phase": "committed",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "seed",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          },
+          {
+            "seq": 7,
+            "ms": 214.60000000009313,
+            "type": "application-intent",
+            "submittedValue": "seed",
+            "phase": "committed",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "seed",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          },
+          {
+            "seq": 8,
+            "ms": 214.69999999995343,
+            "type": "native-serialization",
+            "serializedValue": "seed",
+            "defaultPrevented": true,
+            "phase": "committed",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "seed",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          },
+          {
+            "seq": 9,
+            "ms": 219.80000000004657,
+            "type": "checkpoint",
+            "phase": "committed",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "seed",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          }
+        ],
+        "oracle": {
+          "status": "violation",
+          "failures": [
+            {
+              "kind": "dom-loss",
+              "phase": "committed",
+              "seq": 5,
+              "expected": "t",
+              "actual": "seed"
+            },
+            {
+              "kind": "submission-loss",
+              "phase": "committed",
+              "seq": 7,
+              "expected": "t",
+              "actual": "seed"
+            }
+          ],
+          "inconclusive": [],
+          "accepted_edits": 1,
+          "blocked_edits": 0,
+          "intentional_replacements": 0
+        },
+        "console": [],
+        "page_errors": [],
+        "duration_ms": 265.43049399992924
+      },
+      "minimality": "deletion-1-minimal controller actions with edit and final submit retained; single-character nonempty string tested; not globally minimal JS/program input"
+    },
+    {
+      "case": "R15",
+      "horizon": "T",
+      "target_kind": "dom-loss",
+      "target_phase": "transitioned",
+      "original_actions": [
+        "noise",
+        "load",
+        "hydrate",
+        "noise",
+        "EDIT",
+        "commit",
+        "transition",
+        "noise"
+      ],
+      "reduced_actions": [
+        "load",
+        "hydrate",
+        "EDIT",
+        "transition"
+      ],
+      "original_edit": "toy-early",
+      "reduced_edit": "t",
+      "attempts": 17,
+      "final": {
+        "case": "R15",
+        "framework": "react",
+        "split": "holdout",
+        "horizon": "T",
+        "gap": 2,
+        "rep": 0,
+        "evidence_class": "offline-real-chromium",
+        "transport": "intent-and-serialization-only",
+        "trace": [
+          {
+            "seq": 0,
+            "ms": 83.4000000001397,
+            "type": "checkpoint",
+            "phase": "server-visible",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "seed",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": null
+          },
+          {
+            "seq": 1,
+            "ms": 120.10000000009313,
+            "type": "checkpoint",
+            "phase": "loaded",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "seed",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": null
+          },
+          {
+            "seq": 2,
+            "ms": 129.80000000004657,
+            "type": "checkpoint",
+            "phase": "hydrated",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "seed",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          },
+          {
+            "seq": 3,
+            "ms": 181.69999999995343,
+            "type": "native-input",
+            "trusted": true,
+            "eventValue": "t",
+            "phase": "hydrated",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          },
+          {
+            "seq": 4,
+            "ms": 181.9000000001397,
+            "type": "framework-event",
+            "eventValue": "t",
+            "phase": "hydrated",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "seed"
+          },
+          {
+            "seq": 5,
+            "ms": 185.4000000001397,
+            "type": "edit-complete",
+            "requested": "t",
+            "phase": "hydrated",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "t"
+          },
+          {
+            "seq": 6,
+            "ms": 188.4000000001397,
+            "type": "native-change",
+            "trusted": true,
+            "eventValue": "t",
+            "phase": "hydrated",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 1,
+                "tag": "INPUT",
+                "value": "t",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "t"
+          },
+          {
+            "seq": 7,
+            "ms": 190.5,
+            "type": "checkpoint",
+            "phase": "transitioned",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 2,
+                "tag": "INPUT",
+                "value": "seed",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "t"
+          },
+          {
+            "seq": 8,
+            "ms": 192.10000000009313,
+            "type": "checkpoint",
+            "phase": "transitioned",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 2,
+                "tag": "INPUT",
+                "value": "seed",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "t"
+          },
+          {
+            "seq": 9,
+            "ms": 231.4000000001397,
+            "type": "native-serialization",
+            "serializedValue": "seed",
+            "defaultPrevented": false,
+            "phase": "transitioned",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 2,
+                "tag": "INPUT",
+                "value": "seed",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "t"
+          },
+          {
+            "seq": 10,
+            "ms": 237.60000000009313,
+            "type": "checkpoint",
+            "phase": "transitioned",
+            "fields": [
+              {
+                "id": "toy-field",
+                "node": 2,
+                "tag": "INPUT",
+                "value": "seed",
+                "attribute": "seed",
+                "checkedAttribute": false,
+                "disabled": false,
+                "readOnly": false
+              }
+            ],
+            "appValue": "t"
+          }
+        ],
+        "oracle": {
+          "status": "violation",
+          "failures": [
+            {
+              "kind": "dom-loss",
+              "phase": "transitioned",
+              "seq": 7,
+              "expected": "t",
+              "actual": "seed"
+            },
+            {
+              "kind": "submission-loss",
+              "phase": "transitioned",
+              "seq": 9,
+              "expected": "t",
+              "actual": "seed"
+            }
+          ],
+          "inconclusive": [],
+          "accepted_edits": 1,
+          "blocked_edits": 0,
+          "intentional_replacements": 0
+        },
+        "console": [],
+        "page_errors": [],
+        "duration_ms": 288.35695099996883
+      },
+      "minimality": "deletion-1-minimal controller actions with edit and final submit retained; single-character nonempty string tested; not globally minimal JS/program input"
+    }
+  ]
+}

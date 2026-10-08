@@ -1,0 +1,32 @@
+{
+  "browser_failure_witnesses": 144,
+  "target_failures_preserved": 144,
+  "one_minimal_witnesses": 144,
+  "median_original_events": 18.0,
+  "median_witness_events": 6.0,
+  "median_reduction_percent": 65.0,
+  "mean_reduction_percent": 66.6,
+  "total_predicate_evaluations": 8800,
+  "failure_kinds": {
+    "consumer-only-loss": 96,
+    "display-loss": 48
+  },
+  "families": {
+    "transactions": {
+      "witnesses": 80,
+      "median_original_events": 17.0,
+      "median_witness_events": 6.0,
+      "median_reduction_percent": 64.7,
+      "max_witness_events": 7
+    },
+    "typed-transactions": {
+      "witnesses": 64,
+      "median_original_events": 18.0,
+      "median_witness_events": 5.5,
+      "median_reduction_percent": 69.4,
+      "max_witness_events": 7
+    }
+  },
+  "wall_seconds": 0.859,
+  "minimality_scope": "deletion-1-minimal observed events under one exact semantic failure key; values and event order are unchanged"
+}

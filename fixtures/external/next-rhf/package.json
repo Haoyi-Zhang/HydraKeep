@@ -1,0 +1,1 @@
+{"name":"hydrakeep-next-rhf-example","private":true,"scripts":{"dev":"next dev -p 8771","build":"next build","start":"next start -p 8771"},"dependencies":{"next":"15.5.27","react":"18.3.1","react-dom":"18.3.1","react-hook-form":"7.51.5"},"devDependencies":{"@types/node":"20.12.12","@types/react":"18.3.3","@types/react-dom":"18.3.0","typescript":"5.4.5"}}

@@ -1,0 +1,28 @@
+cd artifact && python -m unittest discover -s tests -v
+test_attribute_is_not_value (test_oracle.OracleTests.test_attribute_is_not_value) ... ok
+test_authorized_epoch (test_oracle.OracleTests.test_authorized_epoch) ... ok
+test_disabled_not_forced (test_oracle.OracleTests.test_disabled_not_forced) ... ok
+test_dom_loss (test_oracle.OracleTests.test_dom_loss) ... ok
+test_edit_after_reset_creates_obligation (test_oracle.OracleTests.test_edit_after_reset_creates_obligation) ... ok
+test_false_readiness (test_oracle.OracleTests.test_false_readiness) ... ok
+test_finite_congruence (test_oracle.OracleTests.test_finite_congruence) ... ok
+test_forced_edit_rejected (test_oracle.OracleTests.test_forced_edit_rejected) ... ok
+test_grid_partition (test_oracle.OracleTests.test_grid_partition) ... ok
+test_identity_ablations (test_oracle.OracleTests.test_identity_ablations) ... ok
+test_identity_ambiguity (test_oracle.OracleTests.test_identity_ambiguity) ... ok
+test_missing_consumer_is_inconclusive (test_oracle.OracleTests.test_missing_consumer_is_inconclusive) ... ok
+test_native_channel_is_not_stale_app_state (test_oracle.OracleTests.test_native_channel_is_not_stale_app_state) ... ok
+test_preserved (test_oracle.OracleTests.test_preserved) ... ok
+test_prior_violation_survives_reset (test_oracle.OracleTests.test_prior_violation_survives_reset) ... ok
+test_removal_authorizes_absence_but_not_stale_submission (test_oracle.OracleTests.test_removal_authorizes_absence_but_not_stale_submission) ... ok
+test_replacement_retains_logical_obligation (test_oracle.OracleTests.test_replacement_retains_logical_obligation) ... ok
+test_state_only (test_oracle.OracleTests.test_state_only) ... ok
+test_trusted_reset_discharges (test_oracle.OracleTests.test_trusted_reset_discharges) ... ok
+test_typed_values (test_oracle.OracleTests.test_typed_values) ... ok
+test_untrusted_reset_does_not_discharge (test_oracle.OracleTests.test_untrusted_reset_does_not_discharge) ... ok
+test_wrong_logical_field_is_inconclusive (test_oracle.OracleTests.test_wrong_logical_field_is_inconclusive) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.010s
+
+OK

@@ -1,0 +1,14 @@
+{
+  "runs": 482,
+  "wall_seconds": 160.58859869900004,
+  "browser": "144.0.7559.96",
+  "counts": {
+    "clean": 330,
+    "violation": 146,
+    "no-edit": 6
+  },
+  "receipt_count": 482,
+  "cases": 16,
+  "repeats": 1,
+  "scope": "authored two-field integrations; production runtimes; offline browser prerender; actual local application fetch"
+}

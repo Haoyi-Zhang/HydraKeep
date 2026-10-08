@@ -1,0 +1,7 @@
+method,runs,detected_configurations,reference_violating_configurations,extra_configurations,sum_run_seconds,selection,ids
+Post-hydration,16,0,8,0,5.833724656999892,predeclared subset or sensor replay on reference,
+Fixed pre-hydration,16,4,8,0,5.857488082999794,predeclared subset or sensor replay on reference,MR02;MR06;MV02;MV06
+Phase grid,608,8,8,0,238.87572831400007,predeclared subset or sensor replay on reference,MR02;MR03;MR05;MR06;MV02;MV03;MV05;MV06
+Source-proposed quotient,482,8,8,0,160.50498273500068,separately executed,MR02;MR03;MR05;MR06;MV02;MV03;MV05;MV06
+DOM-only sensor,608,7,8,0,238.87572831400007,predeclared subset or sensor replay on reference,MR03;MR05;MR06;MV02;MV03;MV05;MV06
+Production warning sensor,608,0,8,0,238.87572831400007,predeclared subset or sensor replay on reference,

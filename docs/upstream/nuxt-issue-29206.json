@@ -1,0 +1,10 @@
+{
+  "html_url": "https://github.com/nuxt/nuxt/issues/29206",
+  "url": "https://api.github.com/repos/nuxt/nuxt/issues/29206",
+  "number": 29206,
+  "title": "Input v-model reset to default value after all browser resources loaded",
+  "state": "closed",
+  "created_at": "2024-09-27T22:11:56Z",
+  "updated_at": "2024-12-02T17:59:20Z",
+  "body": "### Environment\n\n------------------------------\r\n- Operating System: Darwin\r\n- Node Version:     v20.9.0\r\n- Nuxt Version:     3.13.2\r\n- CLI Version:      3.14.0\r\n- Nitro Version:    2.9.7\r\n- Package Manager:  yarn@1.22.22\r\n- Builder:          -\r\n- User Config:      -\r\n- Runtime Modules:  -\r\n- Build Modules:    -\r\n------------------------------\r\n\n\n### Reproduction\n\nhttps://stackblitz.com/github/anton-chernianu/nuxt3-issue?file=app.vue\n\n### Describe the bug\n\n\r\n\r\n- user loads a page with a slow internet connection\r\n- starts entering some values ​​into the input with v-model\r\n- after all browser resources loaded - input v-model reset to default value\r\n\r\nhttps://github.com/user-attachments/assets/04c31cfc-6c27-409c-8070-47470df0d9d6\r\n\r\n\n\n### Additional context\n\n_No response_\n\n### Logs\n\n_No response_"
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "HTR01",
+    "framework": "react",
+    "pattern": "typed-snapshot",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTR02",
+    "framework": "react",
+    "pattern": "late-read",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTR03",
+    "framework": "react",
+    "pattern": "checkbox-coercion",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTR04",
+    "framework": "react",
+    "pattern": "scoped-submit",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTR05",
+    "framework": "react",
+    "pattern": "overbroad-clear",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTR06",
+    "framework": "react",
+    "pattern": "epoch-reset",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTR07",
+    "framework": "react",
+    "pattern": "stale-after-reset",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTR08",
+    "framework": "react",
+    "pattern": "replacement",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTV01",
+    "framework": "vue",
+    "pattern": "typed-snapshot",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTV02",
+    "framework": "vue",
+    "pattern": "late-read",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTV03",
+    "framework": "vue",
+    "pattern": "checkbox-coercion",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTV04",
+    "framework": "vue",
+    "pattern": "scoped-submit",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTV05",
+    "framework": "vue",
+    "pattern": "overbroad-clear",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTV06",
+    "framework": "vue",
+    "pattern": "epoch-reset",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTV07",
+    "framework": "vue",
+    "pattern": "stale-after-reset",
+    "split": "authored-heterogeneous-control"
+  },
+  {
+    "id": "HTV08",
+    "framework": "vue",
+    "pattern": "replacement",
+    "split": "authored-heterogeneous-control"
+  }
+]

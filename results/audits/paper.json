@@ -1,0 +1,30 @@
+{
+  "manuscripts": {
+    "anonymous": {
+      "pages": 12,
+      "main_text_pages": 8,
+      "reference_start_page": 9,
+      "appendix_start_page": 11,
+      "page_8_words": 923
+    },
+    "authored": {
+      "pages": 12,
+      "main_text_pages": 8,
+      "reference_start_page": 9,
+      "appendix_start_page": 11,
+      "page_8_words": 884
+    }
+  },
+  "bibliography_entries": 73,
+  "research_publications": 38,
+  "specification_documentation_source_entries": 35,
+  "all_bibliography_entries_cited": true,
+  "reference_ledger_rows": 73,
+  "passing_tests_reported": 119,
+  "unresolved_citations_or_references": false,
+  "overfull_boxes": false,
+  "publisher_class_options": "sigconf,anonymous,review",
+  "anonymous_author_leak": false,
+  "quantitative_inputs": "validated phase-grid, native-integration, transaction, typed-transaction, model, and witness records",
+  "scope": "structural, citation-coverage, build-log, anonymity, and PDF-boundary checks; not acceptance prediction"
+}

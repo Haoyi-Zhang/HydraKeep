@@ -1,0 +1,13 @@
+{
+  "runs": 128,
+  "cases": 16,
+  "browser": "144.0.7559.96",
+  "repeats": 2,
+  "wall_seconds": 58.16200917200001,
+  "counts": {
+    "clean": 48,
+    "violation": 80
+  },
+  "receipt_count": 256,
+  "scope": "two text fields; authored workflows; production bundles; offline browser prerender; actual loopback requests"
+}

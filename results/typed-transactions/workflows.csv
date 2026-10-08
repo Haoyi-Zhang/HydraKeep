@@ -1,0 +1,9 @@
+workflow,runs,clean,violation,consumer_only,median_ms
+typed-snapshot,16,16,0,0,478.685
+late-read,16,0,16,16,474.132
+checkbox-coercion,16,0,16,16,495.373
+scoped-submit,16,16,0,0,466.756
+overbroad-clear,16,0,16,0,456.549
+epoch-reset,16,16,0,0,524.224
+stale-after-reset,16,0,16,16,494.173
+replacement,16,16,0,0,501.057

@@ -1,0 +1,13 @@
+{
+  "repository": "vercel/next.js",
+  "commit": "1fffea65b678744091a6dc13996339dcf8dcfe4e",
+  "upstream_blob": "8f421e010b0720b4d2ef0ebaa7e34ff38a4d667e",
+  "sha256": {
+    "pages/index.upstream.tsx.txt": "c4f8c6d8006eb3276a3c6621a8fe8160a64ec6f355058d1e201e7614b3b4d8a7",
+    "pages/index.tsx": "0063a03e1f2996fa744889a95a74858ccea4a597274de53d7256d13fd9ece89f",
+    "pages/api/receipt.ts": "6960dffcb760d4378d77981674deb24fbddedd173ad0881a46250e9a37612f4f",
+    "package.json": "9f27eca3748ad781f6e568245f372f288a07dfeb3777c9e30f4bc7b35cfb29d4",
+    "package-lock.json": "f5497c819f10e6289d7dbaae01e415a8b634833c3421503a010884117d8169ed",
+    "LICENSE.txt": "6ef3167db8a88e6f197f76ef0750cbeee83410b5d3f242f2c3e5f5e51e3e59a5"
+  }
+}

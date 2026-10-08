@@ -1,0 +1,25 @@
+{
+  "parser": "8.15.0",
+  "scope": "closed state-member assignment subset",
+  "analysis_ms": 4.012453999999998,
+  "effects": {
+    "computed_a": {
+      "known": false,
+      "reads": [],
+      "writes": [],
+      "unknown_effects": true
+    },
+    "computed_b": {
+      "known": false,
+      "reads": [],
+      "writes": [],
+      "unknown_effects": true
+    },
+    "computed_coupled_a": {
+      "known": false,
+      "reads": [],
+      "writes": [],
+      "unknown_effects": true
+    }
+  }
+}

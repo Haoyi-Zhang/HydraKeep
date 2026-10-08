@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-10-07T19:10:54.147969+00:00",
+  "python": "3.13.5",
+  "node": "v22.16.0",
+  "chromium": "Chromium 144.0.7559.96 built on Debian GNU/Linux 13 (trixie)",
+  "playwright": "1.57.0",
+  "pymupdf": "1.26.7",
+  "cgroup_cpu_max": "400000 100000",
+  "cgroup_memory_max": "4294967296",
+  "disk_free_bytes": 31897944064,
+  "transaction_measured_wall_seconds": 58.16200917200001,
+  "per_study_peak_memory": "not measured; the cgroup limit is not a peak-use observation",
+  "navigation_scope": "normal loopback document navigation blocked; offline documents and actual loopback HTTP fetch executed"
+}

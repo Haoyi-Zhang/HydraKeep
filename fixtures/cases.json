@@ -1,0 +1,272 @@
+[
+  {
+    "id": "R01",
+    "framework": "react",
+    "kind": "text",
+    "design": "controlled",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "R02",
+    "framework": "react",
+    "kind": "textarea",
+    "design": "controlled",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "R03",
+    "framework": "react",
+    "kind": "checkbox",
+    "design": "controlled",
+    "initial": false,
+    "edit": true,
+    "split": "development"
+  },
+  {
+    "id": "R04",
+    "framework": "react",
+    "kind": "select",
+    "design": "controlled",
+    "initial": "A",
+    "edit": "B",
+    "split": "development"
+  },
+  {
+    "id": "R05",
+    "framework": "react",
+    "kind": "text",
+    "design": "uncontrolled",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "R06",
+    "framework": "react",
+    "kind": "text",
+    "design": "adopt",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "R07",
+    "framework": "react",
+    "kind": "text",
+    "design": "disabled",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "R08",
+    "framework": "react",
+    "kind": "text",
+    "design": "authority",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "R09",
+    "framework": "react",
+    "kind": "checkbox",
+    "design": "reset",
+    "initial": false,
+    "edit": true,
+    "split": "development"
+  },
+  {
+    "id": "R10",
+    "framework": "react",
+    "kind": "text",
+    "design": "replace",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "R11",
+    "framework": "react",
+    "kind": "text",
+    "design": "shadow",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "R12",
+    "framework": "react",
+    "kind": "select",
+    "design": "native",
+    "initial": "A",
+    "edit": "B",
+    "split": "development"
+  },
+  {
+    "id": "R13",
+    "framework": "react",
+    "kind": "select",
+    "design": "remove",
+    "initial": "A",
+    "edit": "B",
+    "split": "development"
+  },
+  {
+    "id": "V01",
+    "framework": "vue",
+    "kind": "text",
+    "design": "controlled",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "V02",
+    "framework": "vue",
+    "kind": "textarea",
+    "design": "controlled",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "V03",
+    "framework": "vue",
+    "kind": "checkbox",
+    "design": "controlled",
+    "initial": false,
+    "edit": true,
+    "split": "development"
+  },
+  {
+    "id": "V04",
+    "framework": "vue",
+    "kind": "select",
+    "design": "controlled",
+    "initial": "A",
+    "edit": "B",
+    "split": "development"
+  },
+  {
+    "id": "V05",
+    "framework": "vue",
+    "kind": "text",
+    "design": "uncontrolled",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "V06",
+    "framework": "vue",
+    "kind": "text",
+    "design": "adopt",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "V07",
+    "framework": "vue",
+    "kind": "text",
+    "design": "disabled",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "V08",
+    "framework": "vue",
+    "kind": "text",
+    "design": "authority",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "V09",
+    "framework": "vue",
+    "kind": "checkbox",
+    "design": "reset",
+    "initial": false,
+    "edit": true,
+    "split": "development"
+  },
+  {
+    "id": "V10",
+    "framework": "vue",
+    "kind": "text",
+    "design": "replace",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "V11",
+    "framework": "vue",
+    "kind": "text",
+    "design": "shadow",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "development"
+  },
+  {
+    "id": "V12",
+    "framework": "vue",
+    "kind": "select",
+    "design": "native",
+    "initial": "A",
+    "edit": "B",
+    "split": "development"
+  },
+  {
+    "id": "V13",
+    "framework": "vue",
+    "kind": "select",
+    "design": "remove",
+    "initial": "A",
+    "edit": "B",
+    "split": "development"
+  },
+  {
+    "id": "R14",
+    "framework": "react",
+    "kind": "textarea",
+    "design": "uncontrolled",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "holdout"
+  },
+  {
+    "id": "R15",
+    "framework": "react",
+    "kind": "text",
+    "design": "replace-uncontrolled",
+    "initial": "seed",
+    "edit": "toy-early",
+    "split": "holdout"
+  },
+  {
+    "id": "V14",
+    "framework": "vue",
+    "kind": "checkbox",
+    "design": "adopt",
+    "initial": false,
+    "edit": true,
+    "split": "holdout"
+  },
+  {
+    "id": "V15",
+    "framework": "vue",
+    "kind": "select",
+    "design": "disabled",
+    "initial": "A",
+    "edit": "B",
+    "split": "holdout"
+  }
+]

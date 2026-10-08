@@ -1,0 +1,286 @@
+{
+  "before": {
+    "phase": "server-visible",
+    "fields": [
+      {
+        "id": "toy-field",
+        "node": 1,
+        "tag": "INPUT",
+        "value": "toy-early",
+        "attribute": "seed",
+        "checkedAttribute": false,
+        "disabled": false,
+        "readOnly": false
+      }
+    ],
+    "appValue": null
+  },
+  "hydrated": {
+    "phase": "server-visible",
+    "fields": [
+      {
+        "id": "toy-field",
+        "node": 1,
+        "tag": "INPUT",
+        "value": "toy-early",
+        "attribute": "seed",
+        "checkedAttribute": false,
+        "disabled": false,
+        "readOnly": false
+      }
+    ],
+    "appValue": "seed"
+  },
+  "committed": {
+    "phase": "server-visible",
+    "fields": [
+      {
+        "id": "toy-field",
+        "node": 1,
+        "tag": "INPUT",
+        "value": "seed",
+        "attribute": "seed",
+        "checkedAttribute": false,
+        "disabled": false,
+        "readOnly": false
+      }
+    ],
+    "appValue": "seed"
+  },
+  "trace": [
+    {
+      "seq": 0,
+      "ms": 152.70000000001164,
+      "type": "native-input",
+      "trusted": true,
+      "eventValue": "t",
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "t",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": null
+    },
+    {
+      "seq": 1,
+      "ms": 154.70000000001164,
+      "type": "native-input",
+      "trusted": true,
+      "eventValue": "to",
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "to",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": null
+    },
+    {
+      "seq": 2,
+      "ms": 156.60000000003492,
+      "type": "native-input",
+      "trusted": true,
+      "eventValue": "toy",
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "toy",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": null
+    },
+    {
+      "seq": 3,
+      "ms": 157.60000000003492,
+      "type": "native-input",
+      "trusted": true,
+      "eventValue": "toy-",
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "toy-",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": null
+    },
+    {
+      "seq": 4,
+      "ms": 158.5,
+      "type": "native-input",
+      "trusted": true,
+      "eventValue": "toy-e",
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "toy-e",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": null
+    },
+    {
+      "seq": 5,
+      "ms": 159.60000000003492,
+      "type": "native-input",
+      "trusted": true,
+      "eventValue": "toy-ea",
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "toy-ea",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": null
+    },
+    {
+      "seq": 6,
+      "ms": 160.70000000001164,
+      "type": "native-input",
+      "trusted": true,
+      "eventValue": "toy-ear",
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "toy-ear",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": null
+    },
+    {
+      "seq": 7,
+      "ms": 162,
+      "type": "native-input",
+      "trusted": true,
+      "eventValue": "toy-earl",
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "toy-earl",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": null
+    },
+    {
+      "seq": 8,
+      "ms": 163.30000000004657,
+      "type": "native-input",
+      "trusted": true,
+      "eventValue": "toy-early",
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "toy-early",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": null
+    },
+    {
+      "seq": 9,
+      "ms": 256.9000000000233,
+      "type": "application-intent",
+      "submittedValue": "seed",
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    },
+    {
+      "seq": 10,
+      "ms": 257.20000000001164,
+      "type": "native-serialization",
+      "serializedValue": "seed",
+      "defaultPrevented": true,
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  ],
+  "endpoint": [],
+  "evidence_class": "offline-real-Chromium; no endpoint submission",
+  "browser": "144.0.7559.96",
+  "framework": "19.1.1"
+}

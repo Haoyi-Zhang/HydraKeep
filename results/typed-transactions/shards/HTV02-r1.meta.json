@@ -1,0 +1,12 @@
+{
+  "runs": 4,
+  "cases": 1,
+  "browser": "144.0.7559.96",
+  "repeats": 1,
+  "wall_seconds": 2.653049244,
+  "counts": {
+    "violation": 4
+  },
+  "receipt_count": 8,
+  "scope": "text, checkbox, single-select; paired React/Vue authored workflows; actual loopback receipts"
+}

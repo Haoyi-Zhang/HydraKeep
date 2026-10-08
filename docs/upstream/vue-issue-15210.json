@@ -1,0 +1,10 @@
+{
+  "html_url": "https://github.com/vuejs/core/issues/15210",
+  "url": "https://api.github.com/repos/vuejs/core/issues/15210",
+  "number": 15210,
+  "title": "Preserve values entered during hydration for all remaining eligible input types",
+  "state": "open",
+  "created_at": "2026-08-05T11:33:18Z",
+  "updated_at": "2026-09-18T00:58:14Z",
+  "body": "### Vue version\n\n3.5.41\n\n### Link to minimal reproduction\n\nn/a\n\n### Steps to reproduce\n\nn/a\n\n### What is expected?\n\nCoverage for all remaining (and eligible) input types (see https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#input_types) following the recently merged https://github.com/vuejs/core/pull/14411.\n\n### What is actually happening?\n\nValues entered during hydration are preserved only for inputs with type `text` or `textarea`.\n\n### System Info\n\n```shell\n\n```\n\n### Any additional comments?\n\n_No response_"
+}

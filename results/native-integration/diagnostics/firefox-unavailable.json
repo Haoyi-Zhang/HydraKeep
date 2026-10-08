@@ -1,0 +1,9 @@
+{
+  "browser": "Firefox 144.0.2",
+  "attempted": true,
+  "usable_page": false,
+  "included_in_results": false,
+  "observed_content_process_diagnostic": "Sandbox: writing /proc/self/uid_map: EPERM; content process crashed with signal 11",
+  "action": "No OS or browser sandbox restrictions were disabled. Chromium supplies all successful browser measurements.",
+  "scope": "Environment compatibility diagnostic; no Firefox preservation verdict."
+}

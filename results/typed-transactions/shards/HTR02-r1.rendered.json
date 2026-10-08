@@ -1,0 +1,3 @@
+{
+  "HTR02": "<form><label>Name <input data-hk-field=\"name\" type=\"text\" value=\"seed-name\" name=\"name\"></label><label><input data-hk-field=\"agree\" type=\"checkbox\" name=\"agree\"> Agree</label><label>Tier <select name=\"tier\" data-hk-field=\"tier\"><option value=\"basic\" selected=\"\">Basic</option><option value=\"pro\">Pro</option><option value=\"enterprise\">Enterprise</option></select></label><button id=\"submit\" type=\"submit\">Save</button><button id=\"reset-tier\" type=\"button\">Reset tier</button><button id=\"replace-name\" type=\"button\">Replace name</button></form>"
+}

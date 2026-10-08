@@ -1,0 +1,602 @@
+{
+  "R01": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"text\" value=\"seed\" name=\"value\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "R05": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"text\" value=\"seed\" name=\"value\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "R07": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input data-hk-field=\"toy-field\" aria-label=\"Toy field\" disabled=\"\" type=\"text\" value=\"seed\" name=\"value\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": true,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "V01": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"text\" value=\"seed\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "V06": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"text\" value=\"seed\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "V15": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><select name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\" disabled=\"\"><option value=\"A\" selected=\"\">A</option><option value=\"B\">B</option><option value=\"C\">C</option></select><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "SELECT",
+          "value": "A",
+          "attribute": null,
+          "checkedAttribute": false,
+          "disabled": true,
+          "readOnly": false
+        }
+      ],
+      "appValue": "A"
+    }
+  },
+  "R02": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><textarea name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\">seed</textarea><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "TEXTAREA",
+          "value": "seed",
+          "attribute": null,
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "R03": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"checkbox\" value=\"on\" name=\"value\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": false,
+          "attribute": "on",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": false
+    }
+  },
+  "R04": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><select name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\"><option value=\"A\" selected=\"\">A</option><option value=\"B\">B</option><option value=\"C\">C</option></select><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "SELECT",
+          "value": "A",
+          "attribute": null,
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "A"
+    }
+  },
+  "R06": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"text\" value=\"seed\" name=\"value\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "R08": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"text\" value=\"seed\" name=\"value\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "R09": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"checkbox\" value=\"on\" name=\"value\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": false,
+          "attribute": "on",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": false
+    }
+  },
+  "R10": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"text\" value=\"seed\" name=\"value\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "R11": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"text\" value=\"seed\" name=\"value\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "R12": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><select name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\"><option value=\"A\" selected=\"\">A</option><option value=\"B\">B</option><option value=\"C\">C</option></select><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "SELECT",
+          "value": "A",
+          "attribute": null,
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "A"
+    }
+  },
+  "R13": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><select name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\"><option value=\"A\" selected=\"\">A</option><option value=\"B\">B</option><option value=\"C\">C</option></select><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "SELECT",
+          "value": "A",
+          "attribute": null,
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "A"
+    }
+  },
+  "V02": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><textarea name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\">seed</textarea><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "TEXTAREA",
+          "value": "seed",
+          "attribute": null,
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "V03": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"checkbox\" value=\"on\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": false,
+          "attribute": "on",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": false
+    }
+  },
+  "V04": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><select name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\"><option value=\"A\" selected=\"\">A</option><option value=\"B\">B</option><option value=\"C\">C</option></select><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "SELECT",
+          "value": "A",
+          "attribute": null,
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "A"
+    }
+  },
+  "V05": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"text\" value=\"seed\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "V07": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\" disabled=\"\" type=\"text\" value=\"seed\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": true,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "V08": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"text\" value=\"seed\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "V09": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"checkbox\" value=\"on\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": false,
+          "attribute": "on",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": false
+    }
+  },
+  "V10": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"text\" value=\"seed\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "V11": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"text\" value=\"seed\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "V12": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><select name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\" value=\"A\"><option value=\"A\" selected=\"\">A</option><option value=\"B\">B</option><option value=\"C\">C</option></select><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "SELECT",
+          "value": "A",
+          "attribute": "A",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "A"
+    }
+  },
+  "V13": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><select name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\"><option value=\"A\" selected=\"\">A</option><option value=\"B\">B</option><option value=\"C\">C</option></select><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "SELECT",
+          "value": "A",
+          "attribute": null,
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "A"
+    }
+  },
+  "R14": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><textarea name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\">seed</textarea><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "TEXTAREA",
+          "value": "seed",
+          "attribute": null,
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "R15": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"text\" value=\"seed\" name=\"value\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "react browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": "seed",
+          "attribute": "seed",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": "seed"
+    }
+  },
+  "V14": {
+    "html": "<form method=\"POST\" action=\"/submit?run=local\" target=\"receipt\" data-tick=\"0\"><input name=\"value\" data-hk-field=\"toy-field\" aria-label=\"Toy field\" type=\"checkbox\" value=\"on\"><button type=\"submit\" id=\"submit\">Submit</button><button type=\"button\" id=\"reset\">Reset</button></form>",
+    "origin": "vue browser-prerender; not framework server renderer",
+    "initial": {
+      "phase": "server-visible",
+      "fields": [
+        {
+          "id": "toy-field",
+          "node": 1,
+          "tag": "INPUT",
+          "value": false,
+          "attribute": "on",
+          "checkedAttribute": false,
+          "disabled": false,
+          "readOnly": false
+        }
+      ],
+      "appValue": false
+    }
+  }
+}

@@ -1,0 +1,478 @@
+{
+  "single_grid_runs": 1080,
+  "single_quotient_runs": 270,
+  "single_counts": {
+    "violation": 378,
+    "clean": 640,
+    "no-edit": 62
+  },
+  "single_receipts": 1350,
+  "single_agreement_with_legacy": true,
+  "multi_grid_runs": 1216,
+  "multi_reference_runs": 608,
+  "multi_quotient_runs": 482,
+  "multi_counts_reference": {
+    "clean": 424,
+    "violation": 172,
+    "no-edit": 12
+  },
+  "multi_counts_repeated": {
+    "clean": 848,
+    "violation": 344,
+    "no-edit": 24
+  },
+  "multi_counts_quotient": {
+    "clean": 330,
+    "violation": 146,
+    "no-edit": 6
+  },
+  "multi_violating_configs": [
+    "MR02",
+    "MR03",
+    "MR05",
+    "MR06",
+    "MV02",
+    "MV03",
+    "MV05",
+    "MV06"
+  ],
+  "multi_clean_configs": [
+    "MR01",
+    "MR04",
+    "MR07",
+    "MR08",
+    "MV01",
+    "MV04",
+    "MV07",
+    "MV08"
+  ],
+  "multi_state_only_runs": 28,
+  "multi_state_only_configs": [
+    "MR02",
+    "MR06"
+  ],
+  "repeat_signature_disagreements": 0,
+  "quotient_replay_disagreements": 0,
+  "within_class_disagreements": 0,
+  "proposed_classes": 482,
+  "comparison_edges": 126,
+  "retained_fraction": 0.7927631578947368,
+  "reduction_fraction": 0.20723684210526316,
+  "multi_warnings": 0,
+  "multi_page_errors": 0,
+  "pattern_clusters": 8,
+  "cluster_sensitivity": {
+    "estimand": "grid minus fixed-release config coverage, equal pattern weight; descriptive resampling only",
+    "mean": 0.25,
+    "percentile_2_5": 0.0,
+    "percentile_97_5": 0.625,
+    "replicates": 5000,
+    "seed": 771
+  },
+  "holdout": {
+    "configurations": 4,
+    "reference_runs": 152,
+    "violating_configs": [],
+    "counts": {
+      "no-edit": 12,
+      "clean": 140
+    }
+  },
+  "baselines": [
+    {
+      "method": "Post-hydration",
+      "runs": 16,
+      "detected_configurations": 0,
+      "reference_violating_configurations": 8,
+      "extra_configurations": 0,
+      "sum_run_seconds": 5.833724656999892,
+      "selection": "predeclared subset or sensor replay on reference",
+      "ids": ""
+    },
+    {
+      "method": "Fixed pre-hydration",
+      "runs": 16,
+      "detected_configurations": 4,
+      "reference_violating_configurations": 8,
+      "extra_configurations": 0,
+      "sum_run_seconds": 5.857488082999794,
+      "selection": "predeclared subset or sensor replay on reference",
+      "ids": "MR02;MR06;MV02;MV06"
+    },
+    {
+      "method": "Phase grid",
+      "runs": 608,
+      "detected_configurations": 8,
+      "reference_violating_configurations": 8,
+      "extra_configurations": 0,
+      "sum_run_seconds": 238.87572831400007,
+      "selection": "predeclared subset or sensor replay on reference",
+      "ids": "MR02;MR03;MR05;MR06;MV02;MV03;MV05;MV06"
+    },
+    {
+      "method": "Source-proposed quotient",
+      "runs": 482,
+      "detected_configurations": 8,
+      "reference_violating_configurations": 8,
+      "extra_configurations": 0,
+      "sum_run_seconds": 160.50498273500068,
+      "selection": "separately executed",
+      "ids": "MR02;MR03;MR05;MR06;MV02;MV03;MV05;MV06"
+    },
+    {
+      "method": "DOM-only sensor",
+      "runs": 608,
+      "detected_configurations": 7,
+      "reference_violating_configurations": 8,
+      "extra_configurations": 0,
+      "sum_run_seconds": 238.87572831400007,
+      "selection": "predeclared subset or sensor replay on reference",
+      "ids": "MR03;MR05;MR06;MV02;MV03;MV05;MV06"
+    },
+    {
+      "method": "Production warning sensor",
+      "runs": 608,
+      "detected_configurations": 0,
+      "reference_violating_configurations": 8,
+      "extra_configurations": 0,
+      "sum_run_seconds": 238.87572831400007,
+      "selection": "predeclared subset or sensor replay on reference",
+      "ids": ""
+    }
+  ],
+  "ablations": [
+    {
+      "ablation": "dom-only",
+      "missed_reference_traces": 28,
+      "missed_cases": "MR02;MR06",
+      "extra_on_reference_clean": 0
+    },
+    {
+      "ablation": "global-reset",
+      "missed_reference_traces": 30,
+      "missed_cases": "MR05;MV05",
+      "extra_on_reference_clean": 0
+    },
+    {
+      "ablation": "drop-identity",
+      "missed_reference_traces": 22,
+      "missed_cases": "MR06;MV06",
+      "extra_on_reference_clean": 0
+    },
+    {
+      "ablation": "strict-node",
+      "missed_reference_traces": 0,
+      "missed_cases": "",
+      "extra_on_reference_clean": 0
+    }
+  ],
+  "cases": [
+    {
+      "case": "MR01",
+      "pattern": "independent",
+      "framework": "react",
+      "split": "development",
+      "reference": 38,
+      "representatives": 29,
+      "violations": 0,
+      "clean": 38,
+      "no_edit": 0,
+      "state_only": 0
+    },
+    {
+      "case": "MR02",
+      "pattern": "shadow",
+      "framework": "react",
+      "split": "development",
+      "reference": 38,
+      "representatives": 29,
+      "violations": 18,
+      "clean": 20,
+      "no_edit": 0,
+      "state_only": 18
+    },
+    {
+      "case": "MR03",
+      "pattern": "coupled",
+      "framework": "react",
+      "split": "development",
+      "reference": 38,
+      "representatives": 38,
+      "violations": 16,
+      "clean": 22,
+      "no_edit": 0,
+      "state_only": 0
+    },
+    {
+      "case": "MR04",
+      "pattern": "local-reset",
+      "framework": "react",
+      "split": "development",
+      "reference": 38,
+      "representatives": 29,
+      "violations": 0,
+      "clean": 38,
+      "no_edit": 0,
+      "state_only": 0
+    },
+    {
+      "case": "MR05",
+      "pattern": "shared-reset",
+      "framework": "react",
+      "split": "development",
+      "reference": 38,
+      "representatives": 29,
+      "violations": 15,
+      "clean": 23,
+      "no_edit": 0,
+      "state_only": 0
+    },
+    {
+      "case": "MR06",
+      "pattern": "keyed",
+      "framework": "react",
+      "split": "development",
+      "reference": 38,
+      "representatives": 29,
+      "violations": 28,
+      "clean": 10,
+      "no_edit": 0,
+      "state_only": 10
+    },
+    {
+      "case": "MR07",
+      "pattern": "disabled",
+      "framework": "react",
+      "split": "holdout",
+      "reference": 38,
+      "representatives": 29,
+      "violations": 0,
+      "clean": 32,
+      "no_edit": 6,
+      "state_only": 0
+    },
+    {
+      "case": "MR08",
+      "pattern": "remove",
+      "framework": "react",
+      "split": "holdout",
+      "reference": 38,
+      "representatives": 29,
+      "violations": 0,
+      "clean": 38,
+      "no_edit": 0,
+      "state_only": 0
+    },
+    {
+      "case": "MV01",
+      "pattern": "independent",
+      "framework": "vue",
+      "split": "development",
+      "reference": 38,
+      "representatives": 29,
+      "violations": 0,
+      "clean": 38,
+      "no_edit": 0,
+      "state_only": 0
+    },
+    {
+      "case": "MV02",
+      "pattern": "shadow",
+      "framework": "vue",
+      "split": "development",
+      "reference": 38,
+      "representatives": 29,
+      "violations": 32,
+      "clean": 6,
+      "no_edit": 0,
+      "state_only": 0
+    },
+    {
+      "case": "MV03",
+      "pattern": "coupled",
+      "framework": "vue",
+      "split": "development",
+      "reference": 38,
+      "representatives": 38,
+      "violations": 16,
+      "clean": 22,
+      "no_edit": 0,
+      "state_only": 0
+    },
+    {
+      "case": "MV04",
+      "pattern": "local-reset",
+      "framework": "vue",
+      "split": "development",
+      "reference": 38,
+      "representatives": 29,
+      "violations": 0,
+      "clean": 38,
+      "no_edit": 0,
+      "state_only": 0
+    },
+    {
+      "case": "MV05",
+      "pattern": "shared-reset",
+      "framework": "vue",
+      "split": "development",
+      "reference": 38,
+      "representatives": 29,
+      "violations": 15,
+      "clean": 23,
+      "no_edit": 0,
+      "state_only": 0
+    },
+    {
+      "case": "MV06",
+      "pattern": "keyed",
+      "framework": "vue",
+      "split": "development",
+      "reference": 38,
+      "representatives": 29,
+      "violations": 32,
+      "clean": 6,
+      "no_edit": 0,
+      "state_only": 0
+    },
+    {
+      "case": "MV07",
+      "pattern": "disabled",
+      "framework": "vue",
+      "split": "holdout",
+      "reference": 38,
+      "representatives": 29,
+      "violations": 0,
+      "clean": 32,
+      "no_edit": 6,
+      "state_only": 0
+    },
+    {
+      "case": "MV08",
+      "pattern": "remove",
+      "framework": "vue",
+      "split": "holdout",
+      "reference": 38,
+      "representatives": 29,
+      "violations": 0,
+      "clean": 38,
+      "no_edit": 0,
+      "state_only": 0
+    }
+  ],
+  "challenges": {
+    "runs": 20,
+    "counts": {
+      "clean": 12,
+      "violation": 8
+    }
+  },
+  "validation_gate": {
+    "reference_runs": 1216,
+    "representative_runs": 482,
+    "omitted_comparisons": 126,
+    "accepted": true
+  },
+  "fallback": {
+    "runs": 304,
+    "counts": {
+      "clean": 240,
+      "violation": 64
+    },
+    "validation": {
+      "reference_runs": 304,
+      "representative_runs": 152,
+      "omitted_comparisons": 0,
+      "accepted": true
+    }
+  },
+  "total_receiver_backed_runs": 3372,
+  "measured_meta": {
+    "transport-grid": {
+      "runs": 1080,
+      "wall_seconds": 315.24415534300005,
+      "browser": "144.0.7559.96",
+      "counts": {
+        "violation": 378,
+        "clean": 640,
+        "no-edit": 62
+      },
+      "receipts": 1080,
+      "receipt_checks": {
+        "match": 1080
+      },
+      "legacy_disagreements": 0,
+      "transport_counts": {
+        "application-fetch": 864,
+        "instrumented-native-FormData-forwarding": 216
+      },
+      "scope": "offline browser-prerender; actual loopback fetch; native FormData uses disclosed bridge"
+    },
+    "transport-quotient": {
+      "runs": 270,
+      "wall_seconds": 84.28590443300004,
+      "browser": "144.0.7559.96",
+      "counts": {
+        "violation": 68,
+        "clean": 191,
+        "no-edit": 11
+      },
+      "receipts": 270,
+      "receipt_checks": {
+        "match": 270
+      },
+      "legacy_disagreements": 0,
+      "transport_counts": {
+        "application-fetch": 216,
+        "instrumented-native-FormData-forwarding": 54
+      },
+      "scope": "offline browser-prerender; actual loopback fetch; native FormData uses disclosed bridge"
+    },
+    "multi-grid": {
+      "runs": 1216,
+      "wall_seconds": 446.936912572,
+      "browser": "144.0.7559.96",
+      "counts": {
+        "clean": 848,
+        "violation": 344,
+        "no-edit": 24
+      },
+      "receipt_count": 1216,
+      "cases": 16,
+      "repeats": 2,
+      "scope": "authored two-field integrations; production runtimes; offline browser prerender; actual local application fetch"
+    },
+    "multi-quotient": {
+      "runs": 482,
+      "wall_seconds": 160.58859869900004,
+      "browser": "144.0.7559.96",
+      "counts": {
+        "clean": 330,
+        "violation": 146,
+        "no-edit": 6
+      },
+      "receipt_count": 482,
+      "cases": 16,
+      "repeats": 1,
+      "scope": "authored two-field integrations; production runtimes; offline browser prerender; actual local application fetch"
+    },
+    "challenges": {
+      "runs": 20,
+      "statuses": {
+        "clean": 12,
+        "violation": 8
+      },
+      "receipts": 20
+    },
+    "fallback": {
+      "runs": 304,
+      "wall_seconds": 101.14709402300014,
+      "statuses": {
+        "clean": 240,
+        "violation": 64
+      },
+      "receipts": 304,
+      "scope": "4 authored post-design unknown-effect controls; 38 schedules each; 2 repeats; not independent public applications"
+    }
+  }
+}

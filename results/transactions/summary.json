@@ -1,0 +1,112 @@
+{
+  "primary_browser_runs": 128,
+  "primary_http_receipts": 256,
+  "independent_authored_workflow_designs": 8,
+  "paired_framework_configurations": 16,
+  "unique_schedule_cells": 64,
+  "repeated_cell_checks": 64,
+  "repeat_diagnostic_disagreements": 0,
+  "prefix_specification_disagreements": 0,
+  "browser_counts": {
+    "clean": 48,
+    "violation": 80
+  },
+  "model_trace_count": 1152,
+  "model_status_counts": {
+    "clean": 208,
+    "violation": 944
+  },
+  "model_mutant_diagnostic_differences": {
+    "latest-at-receipt": 880,
+    "global-release": 488,
+    "dom-only": 944
+  },
+  "consumer_only_violating_runs": 48,
+  "ablations": [
+    {
+      "variant": "global-release",
+      "missed_violating_traces": 32,
+      "false_alarms_on_clean_traces": 0,
+      "inconclusive": 0
+    },
+    {
+      "variant": "latest-at-receipt",
+      "missed_violating_traces": 16,
+      "false_alarms_on_clean_traces": 32,
+      "inconclusive": 0
+    },
+    {
+      "variant": "dom-only",
+      "missed_violating_traces": 48,
+      "false_alarms_on_clean_traces": 0,
+      "inconclusive": 0
+    }
+  ],
+  "workflows": [
+    {
+      "workflow": "snapshot",
+      "runs": 16,
+      "clean": 16,
+      "violation": 0,
+      "consumer_only": 0,
+      "median_ms": 429.963
+    },
+    {
+      "workflow": "late-read",
+      "runs": 16,
+      "clean": 0,
+      "violation": 16,
+      "consumer_only": 16,
+      "median_ms": 425.923
+    },
+    {
+      "workflow": "stale-closure",
+      "runs": 16,
+      "clean": 0,
+      "violation": 16,
+      "consumer_only": 16,
+      "median_ms": 431.776
+    },
+    {
+      "workflow": "ack-clear",
+      "runs": 16,
+      "clean": 0,
+      "violation": 16,
+      "consumer_only": 0,
+      "median_ms": 415.016
+    },
+    {
+      "workflow": "scoped-submit",
+      "runs": 16,
+      "clean": 16,
+      "violation": 0,
+      "consumer_only": 0,
+      "median_ms": 419.094
+    },
+    {
+      "workflow": "overbroad-clear",
+      "runs": 16,
+      "clean": 0,
+      "violation": 16,
+      "consumer_only": 0,
+      "median_ms": 400.652
+    },
+    {
+      "workflow": "epoch-reset",
+      "runs": 16,
+      "clean": 16,
+      "violation": 0,
+      "consumer_only": 0,
+      "median_ms": 462.313
+    },
+    {
+      "workflow": "stale-after-reset",
+      "runs": 16,
+      "clean": 0,
+      "violation": 16,
+      "consumer_only": 16,
+      "median_ms": 465.942
+    }
+  ],
+  "scope": "offline-document real-browser transaction study with loopback HTTP receivers; separate from native-SSR navigation evidence"
+}

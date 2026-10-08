@@ -1,0 +1,74 @@
+{
+  "MR01": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "native",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "native",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MR02": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "native",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "native",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MV01": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "native",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "native",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MV02": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "native",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "native",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  }
+}

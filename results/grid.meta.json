@@ -1,0 +1,26 @@
+{
+  "wall_seconds": 321.772157775,
+  "browser": "144.0.7559.96",
+  "playwright": "1.57.0",
+  "node": "v22.16.0",
+  "python": "3.13.5",
+  "system": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "counts": {
+    "violation": 378,
+    "clean": 640,
+    "no-edit": 62
+  },
+  "configurations": 30,
+  "schedules_per_configuration": 18,
+  "repeats": 2,
+  "cpu_quota": "400000 100000",
+  "memory_limit": "4294967296",
+  "self_max_rss_kib": 116768,
+  "children_max_rss_kib": 116768,
+  "browser_transport": "offline set_content/add_script_tag; localhost navigation blocked by managed policy",
+  "framework_modes": {
+    "react": "19.1.1 production",
+    "vue": "3.5.13 production"
+  },
+  "holdout": "R14,R15,V14,V15; authored combinations, not independent applications"
+}

@@ -1,0 +1,28 @@
+{
+  "python": "3.13.5",
+  "node": "v22.16.0",
+  "cpu_visible": 5,
+  "cpu_quota": "400000 100000",
+  "memory_limit_bytes": 4294967296,
+  "disk_free_bytes": 32012574720,
+  "network_env": "caas_packages_only",
+  "no_policy_changes": true,
+  "node_health": "ok",
+  "non_browser_endpoint_records": [
+    {
+      "contentType": "application/json",
+      "body": "{\"value\":\"toy-endpoint\"}",
+      "receivedAt": 1791025197255
+    },
+    {
+      "contentType": "application/x-www-form-urlencoded",
+      "body": "value=toy-native",
+      "receivedAt": 1791025197256
+    }
+  ],
+  "endpoint_evidence_scope": "Python HTTP client to local Node server only; not browser submission",
+  "chromium": "144.0.7559.96",
+  "browser_localhost": "blocked or unavailable",
+  "browser_error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:8765/health\nCall log:\n  - navigating to \"http://127.0.0.1:8765/health\", waiting until \"load\"\n",
+  "npm_dns": "[Errno -3] Temporary failure in name resolution"
+}

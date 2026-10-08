@@ -1,0 +1,17 @@
+{
+  "runs": 128,
+  "cases": 16,
+  "repeats": 2,
+  "browser_versions": [
+    "144.0.7559.96"
+  ],
+  "counts": {
+    "clean": 64,
+    "violation": 64
+  },
+  "receipt_count": 256,
+  "shards": 32,
+  "measured_shard_wall_seconds": 90.9,
+  "orchestrator_wall_seconds": 0.023,
+  "scope": "text, checkbox, single-select; paired React/Vue authored workflows; actual loopback receipts"
+}

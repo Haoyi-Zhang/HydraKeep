@@ -1,0 +1,72 @@
+[
+  {
+    "name": "react-original-development.js",
+    "framework": "react",
+    "tag": "original",
+    "mode": "development",
+    "sha256": "136ed3c6f08763f3cf41b38ef341b90f6ce85c90bfa6db95bec114d4dd4d2262"
+  },
+  {
+    "name": "vue-original-development.js",
+    "framework": "vue",
+    "tag": "original",
+    "mode": "development",
+    "sha256": "4ce995f32cc002ab235fe53921d59cc6c57f295d6e1535ffff7d8d0d505d9779"
+  },
+  {
+    "name": "vue-before-development.js",
+    "framework": "vue",
+    "tag": "before",
+    "mode": "development",
+    "sha256": "32b53a51ad898ea65463f3dc9bd6c8c19f68e540778a3dff229af10428e6e37e"
+  },
+  {
+    "name": "vue-after-development.js",
+    "framework": "vue",
+    "tag": "after",
+    "mode": "development",
+    "sha256": "dfc0d45f4d6b4c40fac6456505582b91a54ea2cc725d37423ed1b33587573808"
+  },
+  {
+    "name": "vue-current-development.js",
+    "framework": "vue",
+    "tag": "current",
+    "mode": "development",
+    "sha256": "51c06f22ec9c975b4ccb0bd1210dfd4aaadb0505b8de10ab22166e943fc24099"
+  },
+  {
+    "name": "react-original-production.js",
+    "framework": "react",
+    "tag": "original",
+    "mode": "production",
+    "sha256": "fd15f09143f5dc30708fc721c3bff0ad73158e2372e8125a4e96b177f476d7c9"
+  },
+  {
+    "name": "vue-original-production.js",
+    "framework": "vue",
+    "tag": "original",
+    "mode": "production",
+    "sha256": "48736c9f53219f2e76d8a19f943ae997405b9a852b626c0087daf6f8d6e52c50"
+  },
+  {
+    "name": "vue-before-production.js",
+    "framework": "vue",
+    "tag": "before",
+    "mode": "production",
+    "sha256": "44acc586019d67923ff99d0db8364b7c9d3c2a7ca74a216fc78f86ba72edf8a7"
+  },
+  {
+    "name": "vue-after-production.js",
+    "framework": "vue",
+    "tag": "after",
+    "mode": "production",
+    "sha256": "d94eade90b87c45e32ffb1ba48460ffe7e19b3ba10df60697db4e28885f19d31"
+  },
+  {
+    "name": "vue-current-production.js",
+    "framework": "vue",
+    "tag": "current",
+    "mode": "production",
+    "sha256": "8fd880d471aaa123590c054fa16268d147853fe5b02b483944bbd8fe41dfcdbd"
+  }
+]

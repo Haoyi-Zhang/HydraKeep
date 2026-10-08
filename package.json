@@ -1,0 +1,29 @@
+{
+  "name": "hydrakeep",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "python -m unittest discover -s tests -v",
+    "smoke": "python scripts/run_transport.py --smoke && python scripts/run_multi.py --smoke"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@sparticuz/chromium": "143.0.4",
+    "@vue/server-renderer": "3.5.13",
+    "esbuild": "0.25.5",
+    "playwright": "1.57.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "renderer-after": "npm:@vue/server-renderer@3.5.41",
+    "renderer-before": "npm:@vue/server-renderer@3.5.40",
+    "renderer-current": "npm:@vue/server-renderer@3.5.43",
+    "vue": "3.5.13",
+    "vue-after": "npm:vue@3.5.41",
+    "vue-before": "npm:vue@3.5.40",
+    "vue-current": "npm:vue@3.5.43"
+  }
+}

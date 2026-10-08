@@ -1,0 +1,13 @@
+{
+  "chromium": "144.0.7559.96",
+  "react": {
+    "expected": "19.1.1",
+    "observed": "19.1.1",
+    "source_bytes": 187133
+  },
+  "vue": {
+    "expected": "3.5.13",
+    "observed": "3.5.13",
+    "source_bytes": 157924
+  }
+}

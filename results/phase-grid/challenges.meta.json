@@ -1,0 +1,8 @@
+{
+  "runs": 20,
+  "statuses": {
+    "clean": 12,
+    "violation": 8
+  },
+  "receipts": 20
+}

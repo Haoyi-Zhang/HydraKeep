@@ -1,0 +1,118 @@
+[
+  {
+    "id": "HV-text",
+    "framework": "vue",
+    "pattern": "historical-vmodel",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": false,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "HV-textarea",
+    "framework": "vue",
+    "pattern": "historical-vmodel",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "textarea",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "textarea",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": false,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "HV-email",
+    "framework": "vue",
+    "pattern": "historical-vmodel",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "email",
+        "initial": "seed-a@example.test",
+        "edit": "toy-a@example.test"
+      },
+      {
+        "id": "b",
+        "kind": "email",
+        "initial": "seed-b@example.test",
+        "edit": "toy-b@example.test"
+      }
+    ],
+    "adopt": false,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "HV-checkbox",
+    "framework": "vue",
+    "pattern": "historical-vmodel",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "checkbox",
+        "initial": false,
+        "edit": true
+      },
+      {
+        "id": "b",
+        "kind": "checkbox",
+        "initial": false,
+        "edit": true
+      }
+    ],
+    "adopt": false,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  }
+]

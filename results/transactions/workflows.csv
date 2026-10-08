@@ -1,0 +1,9 @@
+workflow,runs,clean,violation,consumer_only,median_ms
+snapshot,16,16,0,0,429.963
+late-read,16,0,16,16,425.923
+stale-closure,16,0,16,16,431.776
+ack-clear,16,0,16,0,415.016
+scoped-submit,16,16,0,0,419.094
+overbroad-clear,16,0,16,0,400.652
+epoch-reset,16,16,0,0,462.313
+stale-after-reset,16,0,16,16,465.942

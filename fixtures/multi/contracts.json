@@ -1,0 +1,302 @@
+{
+  "MR01": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MR02": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MR03": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MR04": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "application",
+      "resets": [
+        "reset"
+      ],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MR05": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "application",
+      "resets": [
+        "reset"
+      ],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MR06": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MR07": {
+    "a": {
+      "initial": false,
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": true
+    },
+    "b": {
+      "initial": "A",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": true
+    }
+  },
+  "MR08": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "application",
+      "resets": [],
+      "removals": [
+        "remove"
+      ],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MV01": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MV02": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MV03": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MV04": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "application",
+      "resets": [
+        "reset"
+      ],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MV05": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "application",
+      "resets": [
+        "reset"
+      ],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MV06": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  },
+  "MV07": {
+    "a": {
+      "initial": false,
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": true
+    },
+    "b": {
+      "initial": "A",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": true
+    }
+  },
+  "MV08": {
+    "a": {
+      "initial": "seed-a",
+      "channel": "application",
+      "resets": [],
+      "removals": [
+        "remove"
+      ],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    },
+    "b": {
+      "initial": "seed-b",
+      "channel": "application",
+      "resets": [],
+      "removals": [],
+      "reset_requires_user": true,
+      "unavailable_until_hydration": false
+    }
+  }
+}

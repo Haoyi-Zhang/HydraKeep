@@ -1,0 +1,762 @@
+{
+  "HTR01": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTR02": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTR03": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTR04": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTR05": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTR06": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [
+          "reset-tier"
+        ],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTR07": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [
+          "reset-tier"
+        ],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTR08": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTV01": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTV02": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTV03": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTV04": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTV05": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTV06": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [
+          "reset-tier"
+        ],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTV07": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [
+          "reset-tier"
+        ],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "HTV08": {
+    "fields": {
+      "name": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "agree": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "tier": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "name",
+          "agree",
+          "tier"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "identity": {
+        "fields": [
+          "name",
+          "tier"
+        ],
+        "release_display": [
+          "tier"
+        ],
+        "channel": "application"
+      },
+      "consent": {
+        "fields": [
+          "agree"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  }
+}

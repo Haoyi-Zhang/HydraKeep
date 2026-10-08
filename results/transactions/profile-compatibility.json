@@ -1,0 +1,33 @@
+{
+  "retained_trace_reinterpretations": 5702,
+  "diagnostic_disagreements": 0,
+  "studies": [
+    {
+      "file": "phase-grid/multi-grid.jsonl",
+      "traces": 1216,
+      "diagnostic_disagreements": 0
+    },
+    {
+      "file": "phase-grid/multi-quotient.jsonl",
+      "traces": 482,
+      "diagnostic_disagreements": 0
+    },
+    {
+      "file": "native-integration/matrix-chromium.jsonl",
+      "traces": 1216,
+      "diagnostic_disagreements": 0
+    },
+    {
+      "file": "native-integration/matrix-quotient-chromium.jsonl",
+      "traces": 964,
+      "diagnostic_disagreements": 0
+    },
+    {
+      "file": "native-integration/versions-chromium.jsonl",
+      "traces": 1824,
+      "diagnostic_disagreements": 0
+    }
+  ],
+  "new_browser_runs": 0,
+  "lowering": "implicit legacy receipts use a virtual receipt-local terminal consume; no event is claimed to have been recorded"
+}

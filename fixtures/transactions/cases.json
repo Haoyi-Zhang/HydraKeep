@@ -1,0 +1,98 @@
+[
+  {
+    "id": "TR01",
+    "framework": "react",
+    "pattern": "snapshot",
+    "split": "authored-control"
+  },
+  {
+    "id": "TR02",
+    "framework": "react",
+    "pattern": "late-read",
+    "split": "authored-control"
+  },
+  {
+    "id": "TR03",
+    "framework": "react",
+    "pattern": "stale-closure",
+    "split": "authored-control"
+  },
+  {
+    "id": "TR04",
+    "framework": "react",
+    "pattern": "ack-clear",
+    "split": "authored-control"
+  },
+  {
+    "id": "TR05",
+    "framework": "react",
+    "pattern": "scoped-submit",
+    "split": "authored-control"
+  },
+  {
+    "id": "TR06",
+    "framework": "react",
+    "pattern": "overbroad-clear",
+    "split": "authored-control"
+  },
+  {
+    "id": "TR07",
+    "framework": "react",
+    "pattern": "epoch-reset",
+    "split": "authored-control"
+  },
+  {
+    "id": "TR08",
+    "framework": "react",
+    "pattern": "stale-after-reset",
+    "split": "authored-control"
+  },
+  {
+    "id": "TV01",
+    "framework": "vue",
+    "pattern": "snapshot",
+    "split": "authored-control"
+  },
+  {
+    "id": "TV02",
+    "framework": "vue",
+    "pattern": "late-read",
+    "split": "authored-control"
+  },
+  {
+    "id": "TV03",
+    "framework": "vue",
+    "pattern": "stale-closure",
+    "split": "authored-control"
+  },
+  {
+    "id": "TV04",
+    "framework": "vue",
+    "pattern": "ack-clear",
+    "split": "authored-control"
+  },
+  {
+    "id": "TV05",
+    "framework": "vue",
+    "pattern": "scoped-submit",
+    "split": "authored-control"
+  },
+  {
+    "id": "TV06",
+    "framework": "vue",
+    "pattern": "overbroad-clear",
+    "split": "authored-control"
+  },
+  {
+    "id": "TV07",
+    "framework": "vue",
+    "pattern": "epoch-reset",
+    "split": "authored-control"
+  },
+  {
+    "id": "TV08",
+    "framework": "vue",
+    "pattern": "stale-after-reset",
+    "split": "authored-control"
+  }
+]

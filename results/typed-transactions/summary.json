@@ -1,0 +1,128 @@
+{
+  "primary_browser_runs": 128,
+  "loopback_http_receipts": 256,
+  "paired_framework_configurations": 16,
+  "workflow_designs": 8,
+  "unique_schedule_cells": 64,
+  "repeated_cell_checks": 64,
+  "repeat_diagnostic_disagreements": 0,
+  "prefix_specification_disagreements": 0,
+  "status_counts": {
+    "clean": 64,
+    "violation": 64
+  },
+  "failure_kind_counts": {
+    "consumer-only-loss": 48,
+    "display-loss": 16
+  },
+  "consumer_only_violating_runs": 48,
+  "workflows": [
+    {
+      "workflow": "typed-snapshot",
+      "runs": 16,
+      "clean": 16,
+      "violation": 0,
+      "consumer_only": 0,
+      "median_ms": 478.685
+    },
+    {
+      "workflow": "late-read",
+      "runs": 16,
+      "clean": 0,
+      "violation": 16,
+      "consumer_only": 16,
+      "median_ms": 474.132
+    },
+    {
+      "workflow": "checkbox-coercion",
+      "runs": 16,
+      "clean": 0,
+      "violation": 16,
+      "consumer_only": 16,
+      "median_ms": 495.373
+    },
+    {
+      "workflow": "scoped-submit",
+      "runs": 16,
+      "clean": 16,
+      "violation": 0,
+      "consumer_only": 0,
+      "median_ms": 466.756
+    },
+    {
+      "workflow": "overbroad-clear",
+      "runs": 16,
+      "clean": 0,
+      "violation": 16,
+      "consumer_only": 0,
+      "median_ms": 456.549
+    },
+    {
+      "workflow": "epoch-reset",
+      "runs": 16,
+      "clean": 16,
+      "violation": 0,
+      "consumer_only": 0,
+      "median_ms": 524.224
+    },
+    {
+      "workflow": "stale-after-reset",
+      "runs": 16,
+      "clean": 0,
+      "violation": 16,
+      "consumer_only": 16,
+      "median_ms": 494.173
+    },
+    {
+      "workflow": "replacement",
+      "runs": 16,
+      "clean": 16,
+      "violation": 0,
+      "consumer_only": 0,
+      "median_ms": 501.057
+    }
+  ],
+  "ablations": [
+    {
+      "variant": "global-release",
+      "missed_violating_traces": 16,
+      "false_alarms_on_clean_traces": 0,
+      "inconclusive": 0,
+      "changed_diagnostics": 16,
+      "affected_workflows": "overbroad-clear:16"
+    },
+    {
+      "variant": "latest-at-receipt",
+      "missed_violating_traces": 16,
+      "false_alarms_on_clean_traces": 48,
+      "inconclusive": 0,
+      "changed_diagnostics": 96,
+      "affected_workflows": "checkbox-coercion:16;epoch-reset:16;late-read:16;replacement:16;stale-after-reset:16;typed-snapshot:16"
+    },
+    {
+      "variant": "dom-only",
+      "missed_violating_traces": 48,
+      "false_alarms_on_clean_traces": 0,
+      "inconclusive": 0,
+      "changed_diagnostics": 48,
+      "affected_workflows": "checkbox-coercion:16;late-read:16;stale-after-reset:16"
+    },
+    {
+      "variant": "strict-node",
+      "missed_violating_traces": 0,
+      "false_alarms_on_clean_traces": 16,
+      "inconclusive": 0,
+      "changed_diagnostics": 16,
+      "affected_workflows": "replacement:16"
+    },
+    {
+      "variant": "consumer-string-coercion",
+      "missed_violating_traces": 16,
+      "false_alarms_on_clean_traces": 0,
+      "inconclusive": 0,
+      "changed_diagnostics": 16,
+      "affected_workflows": "checkbox-coercion:16"
+    }
+  ],
+  "scope": "authored heterogeneous-control workflows in real Chromium with trusted text/checkbox/select actions and loopback JSON receipts"
+}

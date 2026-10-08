@@ -1,0 +1,34 @@
+{
+  "HV-text": {
+    "a": {
+      "channel": "application"
+    },
+    "b": {
+      "channel": "application"
+    }
+  },
+  "HV-textarea": {
+    "a": {
+      "channel": "application"
+    },
+    "b": {
+      "channel": "application"
+    }
+  },
+  "HV-email": {
+    "a": {
+      "channel": "application"
+    },
+    "b": {
+      "channel": "application"
+    }
+  },
+  "HV-checkbox": {
+    "a": {
+      "channel": "application"
+    },
+    "b": {
+      "channel": "application"
+    }
+  }
+}

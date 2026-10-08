@@ -1,0 +1,118 @@
+[
+  {
+    "id": "MRF01",
+    "framework": "react",
+    "pattern": "independent",
+    "split": "post-design-out-of-subset",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": true,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "computed_a",
+      "b": "computed_b"
+    }
+  },
+  {
+    "id": "MRF03",
+    "framework": "react",
+    "pattern": "coupled",
+    "split": "post-design-out-of-subset",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": true,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "computed_coupled_a",
+      "b": "computed_b"
+    }
+  },
+  {
+    "id": "MVF01",
+    "framework": "vue",
+    "pattern": "independent",
+    "split": "post-design-out-of-subset",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": true,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "computed_a",
+      "b": "computed_b"
+    }
+  },
+  {
+    "id": "MVF03",
+    "framework": "vue",
+    "pattern": "coupled",
+    "split": "post-design-out-of-subset",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": true,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "computed_coupled_a",
+      "b": "computed_b"
+    }
+  }
+]

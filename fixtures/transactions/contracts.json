@@ -1,0 +1,650 @@
+{
+  "TR01": {
+    "fields": {
+      "a": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TR02": {
+    "fields": {
+      "a": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TR03": {
+    "fields": {
+      "a": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TR04": {
+    "fields": {
+      "a": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TR05": {
+    "fields": {
+      "a": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TR06": {
+    "fields": {
+      "a": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TR07": {
+    "fields": {
+      "a": {
+        "resets": [
+          "reset-a"
+        ],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TR08": {
+    "fields": {
+      "a": {
+        "resets": [
+          "reset-a"
+        ],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TV01": {
+    "fields": {
+      "a": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TV02": {
+    "fields": {
+      "a": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TV03": {
+    "fields": {
+      "a": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TV04": {
+    "fields": {
+      "a": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TV05": {
+    "fields": {
+      "a": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TV06": {
+    "fields": {
+      "a": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TV07": {
+    "fields": {
+      "a": {
+        "resets": [
+          "reset-a"
+        ],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  },
+  "TV08": {
+    "fields": {
+      "a": {
+        "resets": [
+          "reset-a"
+        ],
+        "removals": [],
+        "reset_requires_user": true
+      },
+      "b": {
+        "resets": [],
+        "removals": [],
+        "reset_requires_user": true
+      }
+    },
+    "consumers": {
+      "all": {
+        "fields": [
+          "a",
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      },
+      "onlyA": {
+        "fields": [
+          "a"
+        ],
+        "release_display": [
+          "a"
+        ],
+        "channel": "application"
+      },
+      "onlyB": {
+        "fields": [
+          "b"
+        ],
+        "release_display": [],
+        "channel": "application"
+      }
+    }
+  }
+}

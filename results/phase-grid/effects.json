@@ -1,0 +1,57 @@
+{
+  "parser": "8.15.0",
+  "scope": "closed state-member assignment subset",
+  "analysis_ms": 4.681223000000003,
+  "effects": {
+    "independent_a": {
+      "known": true,
+      "reads": [],
+      "writes": [
+        "state:a"
+      ],
+      "unknown_effects": false
+    },
+    "independent_b": {
+      "known": true,
+      "reads": [],
+      "writes": [
+        "state:b"
+      ],
+      "unknown_effects": false
+    },
+    "coupled_a": {
+      "known": true,
+      "reads": [],
+      "writes": [
+        "state:a",
+        "state:b"
+      ],
+      "unknown_effects": false
+    },
+    "coupled_b": {
+      "known": true,
+      "reads": [],
+      "writes": [
+        "state:b"
+      ],
+      "unknown_effects": false
+    },
+    "hidden_a": {
+      "known": true,
+      "reads": [],
+      "writes": [
+        "state:a",
+        "state:b"
+      ],
+      "unknown_effects": false
+    },
+    "hidden_b": {
+      "known": true,
+      "reads": [],
+      "writes": [
+        "state:b"
+      ],
+      "unknown_effects": false
+    }
+  }
+}

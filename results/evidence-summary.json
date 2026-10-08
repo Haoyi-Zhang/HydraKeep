@@ -1,0 +1,96 @@
+{
+  "project": "hydrakeep",
+  "primary_evidence": [
+    {
+      "family": "phase-grid and vector-contract studies",
+      "browser_runs": 3372,
+      "http_receipts": 3372
+    },
+    {
+      "family": "native SSR reference grid",
+      "browser_runs": 1216,
+      "http_receipts": 1216
+    },
+    {
+      "family": "native representative replay",
+      "browser_runs": 964,
+      "http_receipts": 964
+    },
+    {
+      "family": "pinned-version stability",
+      "browser_runs": 1824,
+      "http_receipts": 1824
+    },
+    {
+      "family": "reported Vue preservation change",
+      "browser_runs": 288,
+      "http_receipts": 288
+    },
+    {
+      "family": "native HTML submission",
+      "browser_runs": 56,
+      "http_receipts": 56
+    },
+    {
+      "family": "maintained Next.js form",
+      "browser_runs": 18,
+      "http_receipts": 18
+    },
+    {
+      "family": "two-text transaction profile",
+      "browser_runs": 128,
+      "http_receipts": 256
+    },
+    {
+      "family": "heterogeneous transaction profile",
+      "browser_runs": 128,
+      "http_receipts": 256
+    }
+  ],
+  "primary_browser_runs": 7994,
+  "primary_http_receipts": 8250,
+  "transaction_profiles": {
+    "browser_runs": 256,
+    "http_receipts": 512,
+    "incremental_prefix_disagreements": 0
+  },
+  "semantic_witnesses": {
+    "browser_failure_witnesses": 144,
+    "target_failures_preserved": 144,
+    "one_minimal_witnesses": 144,
+    "median_original_events": 18.0,
+    "median_witness_events": 6.0,
+    "median_reduction_percent": 65.0,
+    "mean_reduction_percent": 66.6,
+    "total_predicate_evaluations": 8800,
+    "failure_kinds": {
+      "consumer-only-loss": 96,
+      "display-loss": 48
+    },
+    "families": {
+      "transactions": {
+        "witnesses": 80,
+        "median_original_events": 17.0,
+        "median_witness_events": 6.0,
+        "median_reduction_percent": 64.7,
+        "max_witness_events": 7
+      },
+      "typed-transactions": {
+        "witnesses": 64,
+        "median_original_events": 18.0,
+        "median_witness_events": 5.5,
+        "median_reduction_percent": 69.4,
+        "max_witness_events": 7
+      }
+    },
+    "wall_seconds": 0.859,
+    "minimality_scope": "deletion-1-minimal observed events under one exact semantic failure key; values and event order are unchanged"
+  },
+  "passing_tests": 119,
+  "bibliography_entries": 73,
+  "scope_notes": [
+    "Smoke runs, generated model traces, compatibility reinterpretations, unavailable cells, and auxiliary InitRacer controls are excluded from primary totals.",
+    "Repeated schedules are replications of authored configurations, not independent deployed applications.",
+    "Browser runs and HTTP receipts are separate units because transaction workflows can emit two receipts per run."
+  ]
+}

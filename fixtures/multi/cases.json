@@ -1,0 +1,466 @@
+[
+  {
+    "id": "MR01",
+    "framework": "react",
+    "pattern": "independent",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": true,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MR02",
+    "framework": "react",
+    "pattern": "shadow",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": false,
+    "bindings": {
+      "a": "uncontrolled",
+      "b": "uncontrolled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MR03",
+    "framework": "react",
+    "pattern": "coupled",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": true,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "coupled_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MR04",
+    "framework": "react",
+    "pattern": "local-reset",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": true,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MR05",
+    "framework": "react",
+    "pattern": "shared-reset",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": true,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MR06",
+    "framework": "react",
+    "pattern": "keyed",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": false,
+    "bindings": {
+      "a": "uncontrolled",
+      "b": "uncontrolled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MR07",
+    "framework": "react",
+    "pattern": "disabled",
+    "split": "holdout",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "checkbox",
+        "initial": false,
+        "edit": true
+      },
+      {
+        "id": "b",
+        "kind": "select",
+        "initial": "A",
+        "edit": "B"
+      }
+    ],
+    "adopt": false,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MR08",
+    "framework": "react",
+    "pattern": "remove",
+    "split": "holdout",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "textarea",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": true,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MV01",
+    "framework": "vue",
+    "pattern": "independent",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": true,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MV02",
+    "framework": "vue",
+    "pattern": "shadow",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": false,
+    "bindings": {
+      "a": "uncontrolled",
+      "b": "uncontrolled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MV03",
+    "framework": "vue",
+    "pattern": "coupled",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": true,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "coupled_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MV04",
+    "framework": "vue",
+    "pattern": "local-reset",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": true,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MV05",
+    "framework": "vue",
+    "pattern": "shared-reset",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": true,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MV06",
+    "framework": "vue",
+    "pattern": "keyed",
+    "split": "development",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "text",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": false,
+    "bindings": {
+      "a": "uncontrolled",
+      "b": "uncontrolled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MV07",
+    "framework": "vue",
+    "pattern": "disabled",
+    "split": "holdout",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "checkbox",
+        "initial": false,
+        "edit": true
+      },
+      {
+        "id": "b",
+        "kind": "select",
+        "initial": "A",
+        "edit": "B"
+      }
+    ],
+    "adopt": false,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  },
+  {
+    "id": "MV08",
+    "framework": "vue",
+    "pattern": "remove",
+    "split": "holdout",
+    "fields": [
+      {
+        "id": "a",
+        "kind": "text",
+        "initial": "seed-a",
+        "edit": "toy-a"
+      },
+      {
+        "id": "b",
+        "kind": "textarea",
+        "initial": "seed-b",
+        "edit": "toy-b"
+      }
+    ],
+    "adopt": true,
+    "bindings": {
+      "a": "controlled",
+      "b": "controlled"
+    },
+    "handlers": {
+      "a": "independent_a",
+      "b": "independent_b"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "runs": 270,
+  "wall_seconds": 84.28590443300004,
+  "browser": "144.0.7559.96",
+  "counts": {
+    "violation": 68,
+    "clean": 191,
+    "no-edit": 11
+  },
+  "receipts": 270,
+  "receipt_checks": {
+    "match": 270
+  },
+  "legacy_disagreements": 0,
+  "transport_counts": {
+    "application-fetch": 216,
+    "instrumented-native-FormData-forwarding": 54
+  },
+  "scope": "offline browser-prerender; actual loopback fetch; native FormData uses disclosed bridge"
+}

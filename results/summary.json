@@ -1,0 +1,353 @@
+{
+  "configurations": 30,
+  "reference_schedules": 540,
+  "total_grid_runs": 1080,
+  "counts_reference": {
+    "violation": 189,
+    "clean": 320,
+    "no-edit": 31
+  },
+  "violating_configurations": 20,
+  "violation_ids": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R09",
+    "R10",
+    "R11",
+    "R13",
+    "R14",
+    "R15",
+    "V01",
+    "V02",
+    "V03",
+    "V04",
+    "V05",
+    "V09",
+    "V10",
+    "V11",
+    "V12",
+    "V13"
+  ],
+  "nonviolating_configurations": 10,
+  "nonviolating_ids": [
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R12",
+    "V06",
+    "V07",
+    "V08",
+    "V14",
+    "V15"
+  ],
+  "repeat_signature_disagreements": 0,
+  "equivalence_signature_disagreements": 0,
+  "equivalence_classes": 270,
+  "comparison_edges": 270,
+  "state_only_runs": 27,
+  "state_only_case_ids": [
+    "R01",
+    "R03",
+    "R04",
+    "R09",
+    "R10",
+    "R11",
+    "R13"
+  ],
+  "dom_invisible_violation_runs": 27,
+  "dom_invisible_case_ids": [
+    "R01",
+    "R03",
+    "R04",
+    "R09",
+    "R10",
+    "R11",
+    "R13"
+  ],
+  "production_warning_runs": 0,
+  "first_failure_phase": {
+    "hydrated": 120,
+    "committed": 57,
+    "transitioned": 12
+  },
+  "baseline": [
+    {
+      "method": "Post-load E2E",
+      "runs": 30,
+      "detected_configurations": 0,
+      "reference_violating_configurations": 20,
+      "extra_vs_reference": 0,
+      "sum_measured_run_seconds": 8.953444279999758,
+      "selected_case_ids": ""
+    },
+    {
+      "method": "Fixed release, contract oracle",
+      "runs": 30,
+      "detected_configurations": 18,
+      "reference_violating_configurations": 20,
+      "extra_vs_reference": 0,
+      "sum_measured_run_seconds": 8.196751533000112,
+      "selected_case_ids": "R01;R02;R03;R04;R09;R10;R11;R13;R14;V01;V02;V03;V04;V05;V09;V10;V11;V13"
+    },
+    {
+      "method": "Phase grid",
+      "runs": 540,
+      "detected_configurations": 20,
+      "reference_violating_configurations": 20,
+      "extra_vs_reference": 0,
+      "sum_measured_run_seconds": 157.28220321099786,
+      "selected_case_ids": "R01;R02;R03;R04;R09;R10;R11;R13;R14;R15;V01;V02;V03;V04;V05;V09;V10;V11;V12;V13"
+    },
+    {
+      "method": "Phase quotient",
+      "runs": 270,
+      "detected_configurations": 20,
+      "reference_violating_configurations": 20,
+      "extra_vs_reference": 0,
+      "sum_measured_run_seconds": 79.21765146799919,
+      "selected_case_ids": "R01;R02;R03;R04;R09;R10;R11;R13;R14;R15;V01;V02;V03;V04;V05;V09;V10;V11;V12;V13"
+    },
+    {
+      "method": "Production warning sensor",
+      "runs": 540,
+      "detected_configurations": 0,
+      "reference_violating_configurations": 20,
+      "extra_vs_reference": 0,
+      "sum_measured_run_seconds": 157.28220321099786,
+      "selected_case_ids": ""
+    },
+    {
+      "method": "DOM-only contract sensor",
+      "runs": 540,
+      "detected_configurations": 19,
+      "reference_violating_configurations": 20,
+      "extra_vs_reference": 0,
+      "sum_measured_run_seconds": 157.28220321099786,
+      "selected_case_ids": "R01;R02;R03;R04;R09;R10;R13;R14;R15;V01;V02;V03;V04;V05;V09;V10;V11;V12;V13"
+    }
+  ],
+  "ablations": [
+    {
+      "ablation": "drop-identity",
+      "missed_reference_runs": 6,
+      "extra_flags_on_reference_clean_runs": 0,
+      "missed_case_ids": "R15",
+      "extra_case_ids": ""
+    },
+    {
+      "ablation": "strict-node",
+      "missed_reference_runs": 0,
+      "extra_flags_on_reference_clean_runs": 6,
+      "missed_case_ids": "",
+      "extra_case_ids": "R10;V10"
+    },
+    {
+      "ablation": "attribute-only",
+      "missed_reference_runs": 0,
+      "extra_flags_on_reference_clean_runs": 275,
+      "missed_case_ids": "",
+      "extra_case_ids": "R02;R03;R04;R05;R06;R08;R09;R11;R12;R13;R14;R15;V01;V02;V03;V04;V05;V06;V07;V08;V09;V10;V11;V12;V13;V14;V15"
+    }
+  ],
+  "budget": [
+    {
+      "order": "phase-order",
+      "budget_per_configuration": 1,
+      "runs": 30,
+      "detected_configurations": 18,
+      "sum_measured_run_seconds": 8.196751533000112
+    },
+    {
+      "order": "manual-hint-order",
+      "budget_per_configuration": 1,
+      "runs": 30,
+      "detected_configurations": 19,
+      "sum_measured_run_seconds": 8.421266676999606
+    },
+    {
+      "order": "phase-order",
+      "budget_per_configuration": 2,
+      "runs": 60,
+      "detected_configurations": 18,
+      "sum_measured_run_seconds": 17.063827362999977
+    },
+    {
+      "order": "manual-hint-order",
+      "budget_per_configuration": 2,
+      "runs": 60,
+      "detected_configurations": 19,
+      "sum_measured_run_seconds": 17.232701705999492
+    },
+    {
+      "order": "phase-order",
+      "budget_per_configuration": 3,
+      "runs": 90,
+      "detected_configurations": 19,
+      "sum_measured_run_seconds": 25.606984470999578
+    },
+    {
+      "order": "manual-hint-order",
+      "budget_per_configuration": 3,
+      "runs": 90,
+      "detected_configurations": 20,
+      "sum_measured_run_seconds": 26.316748484999493
+    },
+    {
+      "order": "phase-order",
+      "budget_per_configuration": 4,
+      "runs": 120,
+      "detected_configurations": 19,
+      "sum_measured_run_seconds": 34.40901457699965
+    },
+    {
+      "order": "manual-hint-order",
+      "budget_per_configuration": 4,
+      "runs": 120,
+      "detected_configurations": 20,
+      "sum_measured_run_seconds": 34.65052446999948
+    },
+    {
+      "order": "phase-order",
+      "budget_per_configuration": 5,
+      "runs": 150,
+      "detected_configurations": 19,
+      "sum_measured_run_seconds": 43.42727614899957
+    },
+    {
+      "order": "manual-hint-order",
+      "budget_per_configuration": 5,
+      "runs": 150,
+      "detected_configurations": 20,
+      "sum_measured_run_seconds": 43.49510423999936
+    },
+    {
+      "order": "phase-order",
+      "budget_per_configuration": 6,
+      "runs": 180,
+      "detected_configurations": 20,
+      "sum_measured_run_seconds": 52.3479650189995
+    },
+    {
+      "order": "manual-hint-order",
+      "budget_per_configuration": 6,
+      "runs": 180,
+      "detected_configurations": 20,
+      "sum_measured_run_seconds": 52.45903776099942
+    },
+    {
+      "order": "phase-order",
+      "budget_per_configuration": 7,
+      "runs": 210,
+      "detected_configurations": 20,
+      "sum_measured_run_seconds": 61.26754074499934
+    },
+    {
+      "order": "manual-hint-order",
+      "budget_per_configuration": 7,
+      "runs": 210,
+      "detected_configurations": 20,
+      "sum_measured_run_seconds": 61.34007602399936
+    },
+    {
+      "order": "phase-order",
+      "budget_per_configuration": 8,
+      "runs": 240,
+      "detected_configurations": 20,
+      "sum_measured_run_seconds": 70.24079476199927
+    },
+    {
+      "order": "manual-hint-order",
+      "budget_per_configuration": 8,
+      "runs": 240,
+      "detected_configurations": 20,
+      "sum_measured_run_seconds": 70.24414505899927
+    },
+    {
+      "order": "phase-order",
+      "budget_per_configuration": 9,
+      "runs": 270,
+      "detected_configurations": 20,
+      "sum_measured_run_seconds": 79.21765146799919
+    },
+    {
+      "order": "manual-hint-order",
+      "budget_per_configuration": 9,
+      "runs": 270,
+      "detected_configurations": 20,
+      "sum_measured_run_seconds": 79.21765146799919
+    }
+  ],
+  "holdout_counts": {
+    "development": 18,
+    "holdout": 2
+  },
+  "cluster_bootstrap": {
+    "units": 17,
+    "replicates": 5000,
+    "seed": 4301,
+    "estimand": "equal-cluster mean detection difference (grid minus fixed release); descriptive resampling sensitivity, not Web-population coverage",
+    "observed": 0.08823529411764706,
+    "percentile_2_5": 0.0,
+    "percentile_97_5": 0.23529411764705882
+  },
+  "separate_quotient": {
+    "runs": 270,
+    "reference_signature_disagreements": 0,
+    "sum_run_seconds": 80.38704115899895,
+    "meta": {
+      "wall_seconds": 86.4814105989999,
+      "browser": "144.0.7559.96",
+      "playwright": "1.57.0",
+      "node": "v22.16.0",
+      "python": "3.13.5",
+      "system": "Linux-6.18.44-x86_64-with-glibc2.41",
+      "counts": {
+        "violation": 68,
+        "clean": 191,
+        "no-edit": 11
+      },
+      "configurations": 30,
+      "schedules_per_configuration": 9,
+      "repeats": 1,
+      "cpu_quota": "400000 100000",
+      "memory_limit": "4294967296",
+      "self_max_rss_kib": 110888,
+      "children_max_rss_kib": 110888,
+      "browser_transport": "offline set_content/add_script_tag; localhost navigation blocked by managed policy",
+      "framework_modes": {
+        "react": "19.1.1 production",
+        "vue": "3.5.13 production"
+      },
+      "holdout": "R14,R15,V14,V15; authored combinations, not independent applications"
+    }
+  },
+  "grid_meta": {
+    "wall_seconds": 321.772157775,
+    "browser": "144.0.7559.96",
+    "playwright": "1.57.0",
+    "node": "v22.16.0",
+    "python": "3.13.5",
+    "system": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "counts": {
+      "violation": 378,
+      "clean": 640,
+      "no-edit": 62
+    },
+    "configurations": 30,
+    "schedules_per_configuration": 18,
+    "repeats": 2,
+    "cpu_quota": "400000 100000",
+    "memory_limit": "4294967296",
+    "self_max_rss_kib": 116768,
+    "children_max_rss_kib": 116768,
+    "browser_transport": "offline set_content/add_script_tag; localhost navigation blocked by managed policy",
+    "framework_modes": {
+      "react": "19.1.1 production",
+      "vue": "3.5.13 production"
+    },
+    "holdout": "R14,R15,V14,V15; authored combinations, not independent applications"
+  }
+}

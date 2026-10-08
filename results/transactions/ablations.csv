@@ -1,0 +1,4 @@
+variant,missed_violating_traces,false_alarms_on_clean_traces,inconclusive
+global-release,32,0,0
+latest-at-receipt,16,32,0
+dom-only,48,0,0

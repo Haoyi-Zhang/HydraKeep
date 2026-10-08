@@ -1,0 +1,17 @@
+case,pattern,framework,split,reference,representatives,violations,clean,no_edit,state_only
+MR01,independent,react,development,38,29,0,38,0,0
+MR02,shadow,react,development,38,29,18,20,0,18
+MR03,coupled,react,development,38,38,16,22,0,0
+MR04,local-reset,react,development,38,29,0,38,0,0
+MR05,shared-reset,react,development,38,29,15,23,0,0
+MR06,keyed,react,development,38,29,28,10,0,10
+MR07,disabled,react,holdout,38,29,0,32,6,0
+MR08,remove,react,holdout,38,29,0,38,0,0
+MV01,independent,vue,development,38,29,0,38,0,0
+MV02,shadow,vue,development,38,29,32,6,0,0
+MV03,coupled,vue,development,38,38,16,22,0,0
+MV04,local-reset,vue,development,38,29,0,38,0,0
+MV05,shared-reset,vue,development,38,29,15,23,0,0
+MV06,keyed,vue,development,38,29,32,6,0,0
+MV07,disabled,vue,holdout,38,29,0,32,6,0
+MV08,remove,vue,holdout,38,29,0,38,0,0

@@ -1,0 +1,181 @@
+{
+  "study": "native-integration",
+  "closest_tool_controls": [
+    {
+      "case": "overwrite",
+      "receiver_runs": 4,
+      "monitor_status": "violation",
+      "initracer_overwrite_reports_per_observation_run": 1
+    },
+    {
+      "case": "shadow",
+      "receiver_runs": 4,
+      "monitor_status": "violation",
+      "initracer_overwrite_reports_per_observation_run": 0
+    },
+    {
+      "case": "adopt",
+      "receiver_runs": 4,
+      "monitor_status": "clean",
+      "initracer_overwrite_reports_per_observation_run": 0
+    },
+    {
+      "case": "reset",
+      "receiver_runs": 4,
+      "monitor_status": "clean",
+      "initracer_overwrite_reports_per_observation_run": 1
+    }
+  ],
+  "closest_tool_receiver_backed_runs": 16,
+  "coverage": {
+    "matrix": {
+      "rows": 1216,
+      "configurations": 16,
+      "schedules_per_configuration": 38,
+      "builds": 2,
+      "versions": 1,
+      "repetitions": 1
+    },
+    "versions": {
+      "rows": 1824,
+      "configurations": 8,
+      "schedules_per_configuration": 38,
+      "builds": 2,
+      "versions": 3,
+      "repetitions": 1
+    },
+    "historical": {
+      "rows": 288,
+      "configurations": 4,
+      "schedules_per_configuration": 6,
+      "builds": 2,
+      "versions": 3,
+      "repetitions": 2
+    },
+    "native-submit": {
+      "rows": 56,
+      "configurations": 4,
+      "schedules_per_configuration": 7,
+      "builds": 2,
+      "versions": 1,
+      "repetitions": 1
+    }
+  },
+  "native_matrix_counts": {
+    "clean": 848,
+    "violation": 344,
+    "no-edit": 24
+  },
+  "native_quotient_runs": 964,
+  "native_quotient_counts": {
+    "clean": 660,
+    "violation": 292,
+    "no-edit": 12
+  },
+  "native_counts_by_build": {
+    "development": {
+      "clean": 424,
+      "violation": 172,
+      "no-edit": 12
+    },
+    "production": {
+      "clean": 424,
+      "violation": 172,
+      "no-edit": 12
+    }
+  },
+  "native_legacy_signature_disagreements": 0,
+  "native_build_signature_disagreements": 0,
+  "native_reduction_validation": {
+    "development": {
+      "classes": 482,
+      "omitted_comparisons": 126,
+      "within_class_disagreements": 0,
+      "separate_native_representative_replay": true,
+      "replay_validation": {
+        "reference_runs": 608,
+        "representative_runs": 482,
+        "omitted_comparisons": 126,
+        "accepted": true
+      }
+    },
+    "production": {
+      "classes": 482,
+      "omitted_comparisons": 126,
+      "within_class_disagreements": 0,
+      "separate_native_representative_replay": true,
+      "replay_validation": {
+        "reference_runs": 608,
+        "representative_runs": 482,
+        "omitted_comparisons": 126,
+        "accepted": true
+      }
+    }
+  },
+  "version_matrix_counts": {
+    "clean": 1218,
+    "violation": 570,
+    "no-edit": 36
+  },
+  "version_matrix_signature_disagreements": 0,
+  "historical_counts": {
+    "violation": 128,
+    "clean": 160
+  },
+  "historical_repeat_signature_disagreements": 0,
+  "historical_build_signature_disagreements": 0,
+  "historical_families": [
+    {
+      "case": "HV-checkbox",
+      "runs_per_version": 24,
+      "before": 16,
+      "after": 16,
+      "current": 16
+    },
+    {
+      "case": "HV-email",
+      "runs_per_version": 24,
+      "before": 16,
+      "after": 16,
+      "current": 16
+    },
+    {
+      "case": "HV-text",
+      "runs_per_version": 24,
+      "before": 16,
+      "after": 0,
+      "current": 0
+    },
+    {
+      "case": "HV-textarea",
+      "runs_per_version": 24,
+      "before": 16,
+      "after": 0,
+      "current": 0
+    }
+  ],
+  "native_submission_counts": {
+    "clean": 48,
+    "violation": 8
+  },
+  "native_pre_hydration_counts": {
+    "clean": 8
+  },
+  "public_profiles": 32,
+  "public_completed_receipts": 18,
+  "receipt_time_only_flags_on_clean_public_traces": 18,
+  "public_unavailable_profiles": 14,
+  "public_counts_by_build": {
+    "development": {
+      "not-evaluated": 14,
+      "clean": 2
+    },
+    "production": {
+      "clean": 16
+    }
+  },
+  "new_complete_receiver_backed_runs": 4366,
+  "complete_receiver_backed_runs_with_phase_grid": 7738,
+  "browser": "Chromium 143.0.7499.0",
+  "concurrency_note": "Experiments overlapped; wall-time ratios are not speedups."
+}

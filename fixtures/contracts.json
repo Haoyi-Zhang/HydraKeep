@@ -1,0 +1,314 @@
+{
+  "R01": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "R02": {
+    "logical_field": "toy-field",
+    "kind": "textarea",
+    "initial": "seed",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "R03": {
+    "logical_field": "toy-field",
+    "kind": "checkbox",
+    "initial": false,
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "R04": {
+    "logical_field": "toy-field",
+    "kind": "select",
+    "initial": "A",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "R05": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "native-serialization"
+  },
+  "R06": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "R07": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "not-ready",
+    "resets": [],
+    "remove_at": null,
+    "readiness": "hydrated",
+    "channel": "application-intent"
+  },
+  "R08": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "client-authoritative",
+    "resets": [
+      "hydrated",
+      "committed"
+    ],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "R09": {
+    "logical_field": "toy-field",
+    "kind": "checkbox",
+    "initial": false,
+    "policy": "preserve",
+    "resets": [
+      "transitioned"
+    ],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent",
+    "reset_requires_user": true
+  },
+  "R10": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "R11": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "R12": {
+    "logical_field": "toy-field",
+    "kind": "select",
+    "initial": "A",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "native-serialization"
+  },
+  "R13": {
+    "logical_field": "toy-field",
+    "kind": "select",
+    "initial": "A",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": "transitioned",
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "V01": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "V02": {
+    "logical_field": "toy-field",
+    "kind": "textarea",
+    "initial": "seed",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "V03": {
+    "logical_field": "toy-field",
+    "kind": "checkbox",
+    "initial": false,
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "V04": {
+    "logical_field": "toy-field",
+    "kind": "select",
+    "initial": "A",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "V05": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "native-serialization"
+  },
+  "V06": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "V07": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "not-ready",
+    "resets": [],
+    "remove_at": null,
+    "readiness": "hydrated",
+    "channel": "application-intent"
+  },
+  "V08": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "client-authoritative",
+    "resets": [
+      "hydrated",
+      "committed"
+    ],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "V09": {
+    "logical_field": "toy-field",
+    "kind": "checkbox",
+    "initial": false,
+    "policy": "preserve",
+    "resets": [
+      "transitioned"
+    ],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent",
+    "reset_requires_user": true
+  },
+  "V10": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "V11": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "V12": {
+    "logical_field": "toy-field",
+    "kind": "select",
+    "initial": "A",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "native-serialization"
+  },
+  "V13": {
+    "logical_field": "toy-field",
+    "kind": "select",
+    "initial": "A",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": "transitioned",
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "R14": {
+    "logical_field": "toy-field",
+    "kind": "textarea",
+    "initial": "seed",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "native-serialization"
+  },
+  "R15": {
+    "logical_field": "toy-field",
+    "kind": "text",
+    "initial": "seed",
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "native-serialization"
+  },
+  "V14": {
+    "logical_field": "toy-field",
+    "kind": "checkbox",
+    "initial": false,
+    "policy": "preserve",
+    "resets": [],
+    "remove_at": null,
+    "readiness": null,
+    "channel": "application-intent"
+  },
+  "V15": {
+    "logical_field": "toy-field",
+    "kind": "select",
+    "initial": "A",
+    "policy": "not-ready",
+    "resets": [],
+    "remove_at": null,
+    "readiness": "hydrated",
+    "channel": "application-intent"
+  }
+}

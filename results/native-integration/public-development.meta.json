@@ -1,0 +1,9 @@
+{
+  "runs": 16,
+  "counts": {
+    "not-evaluated": 14,
+    "clean": 2
+  },
+  "receipts": 2,
+  "scope": "one independent MIT Next.js example; callback-only receipt and readiness instrumentation; no production users or upstream defect claim"
+}

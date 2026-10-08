@@ -1,0 +1,15 @@
+strategy,budget_per_case,runs,cases
+phase-grid,1,16,4
+source-quotient,1,16,4
+phase-grid,2,32,4
+source-quotient,2,32,4
+phase-grid,4,64,6
+source-quotient,4,64,6
+phase-grid,8,128,6
+source-quotient,8,128,6
+phase-grid,16,256,6
+source-quotient,16,256,8
+phase-grid,29,464,8
+source-quotient,29,464,8
+phase-grid,38,608,8
+source-quotient,38,482,8

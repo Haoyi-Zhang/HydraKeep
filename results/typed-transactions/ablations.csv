@@ -1,0 +1,6 @@
+variant,missed_violating_traces,false_alarms_on_clean_traces,inconclusive,changed_diagnostics,affected_workflows
+global-release,16,0,0,16,overbroad-clear:16
+latest-at-receipt,16,48,0,96,checkbox-coercion:16;epoch-reset:16;late-read:16;replacement:16;stale-after-reset:16;typed-snapshot:16
+dom-only,48,0,0,48,checkbox-coercion:16;late-read:16;stale-after-reset:16
+strict-node,0,16,0,16,replacement:16
+consumer-string-coercion,16,0,0,16,checkbox-coercion:16

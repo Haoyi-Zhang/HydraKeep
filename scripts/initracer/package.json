@@ -1,0 +1,35 @@
+{
+  "name": "initracer",
+  "version": "0.0.1",
+  "dependencies": {
+    "@babel/core": "7.28.4",
+    "@babel/preset-env": "7.28.3",
+    "acorn": "^4.0.11",
+    "browserify": "^13.1.1",
+    "charfunk": "^1.1.2",
+    "colors": "^1.1.2",
+    "cp-r": "^0.1.2",
+    "esotope": "^1.4.5",
+    "falafel": "git+https://github.com/christofferqa/node-falafel.git",
+    "jsesc": "^2.3.0",
+    "mkdirp": "0.5.0",
+    "murmurhash": "0.0.2",
+    "parse5": "2.1.5",
+    "q": "^1.4.1",
+    "rewriting-proxy": "0.5.1",
+    "rimraf": "^2.5.4",
+    "yargs": "6.6.0"
+  },
+  "jshintConfig": {
+    "node": true,
+    "noempty": true,
+    "noarg": true,
+    "eqeqeq": true,
+    "browser": true,
+    "bitwise": true,
+    "curly": true,
+    "undef": true,
+    "nonew": true,
+    "forin": true
+  }
+}
