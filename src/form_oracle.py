@@ -61,7 +61,7 @@ def interpret_form(trace:list[dict[str,Any]], contracts:dict[str,dict[str,Any]],
                 payload=e.get('payload',{})
                 if not isinstance(payload,dict):unknown.append('invalid consumer payload shape');continue
                 q=pending[fid] if pending is not None else st
-                if q['removed'] and fid in payload:fail(fid,'removed-field-submission',e,payload[fid],q)
+                if q['removed'] and fid in payload and ablation!='dom-only':fail(fid,'removed-field-submission',e,payload[fid],q)
                 elif q['active'] and ablation!='dom-only' and not same_value(payload.get(fid),q['expected']):
                     visible=q['visible'] if pending is not None else len(fs)==1 and same_value(fs[0]['value'],q['expected'])
                     fail(fid,'state-only-loss' if visible else 'submission-loss',e,payload.get(fid),q)

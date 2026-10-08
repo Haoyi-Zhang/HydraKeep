@@ -1,0 +1,1329 @@
+{
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.28000-SP0",
+    "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel"
+  },
+  "witnesses": 144,
+  "repetitions": 3,
+  "identical_witnesses": true,
+  "one_minimal": true,
+  "direct_predicate_evaluations": 8800,
+  "cached_predicate_evaluations": 6932,
+  "avoided_evaluations": 1868,
+  "avoided_percent": 21.23,
+  "elapsed_ms": {
+    "True": [
+      645.2539,
+      648.1891,
+      643.7259
+    ],
+    "False": [
+      816.6474,
+      763.0636,
+      761.9303
+    ]
+  },
+  "median_ms": {
+    "True": 645.2539,
+    "False": 763.0636
+  },
+  "records": [
+    {
+      "family": "transactions",
+      "run": "transaction-5",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-6",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-7",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-8",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-9",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-10",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-11",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-12",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-13",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 61,
+      "direct_evaluations": 76,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-14",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 38,
+      "direct_evaluations": 53,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-15",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 60,
+      "direct_evaluations": 76,
+      "cache_hits": 16
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-16",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 38,
+      "direct_evaluations": 53,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-21",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 44,
+      "direct_evaluations": 57,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-22",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 44,
+      "direct_evaluations": 57,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-23",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 46,
+      "direct_evaluations": 60,
+      "cache_hits": 14
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-24",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 46,
+      "direct_evaluations": 60,
+      "cache_hits": 14
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-29",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-30",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-31",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-32",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-37",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-38",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-39",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-40",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-41",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-42",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-43",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-44",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-45",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 61,
+      "direct_evaluations": 76,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-46",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 38,
+      "direct_evaluations": 53,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-47",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 60,
+      "direct_evaluations": 76,
+      "cache_hits": 16
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-48",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 38,
+      "direct_evaluations": 53,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-53",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 44,
+      "direct_evaluations": 57,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-54",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 44,
+      "direct_evaluations": 57,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-55",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 46,
+      "direct_evaluations": 60,
+      "cache_hits": 14
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-56",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 46,
+      "direct_evaluations": 60,
+      "cache_hits": 14
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-61",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-62",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-63",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-64",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-69",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-70",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-71",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-72",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-73",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-74",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-75",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-76",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-77",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 61,
+      "direct_evaluations": 76,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-78",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 38,
+      "direct_evaluations": 53,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-79",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 60,
+      "direct_evaluations": 76,
+      "cache_hits": 16
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-80",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 38,
+      "direct_evaluations": 53,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-85",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 44,
+      "direct_evaluations": 57,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-86",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 44,
+      "direct_evaluations": 57,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-87",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 46,
+      "direct_evaluations": 60,
+      "cache_hits": 14
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-88",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 46,
+      "direct_evaluations": 60,
+      "cache_hits": 14
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-93",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-94",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-95",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-96",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-101",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-102",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-103",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-104",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-105",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-106",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-107",
+      "original_events": 17,
+      "witness_events": 5,
+      "cached_evaluations": 43,
+      "direct_evaluations": 54,
+      "cache_hits": 11
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-108",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-109",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 61,
+      "direct_evaluations": 76,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-110",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 38,
+      "direct_evaluations": 53,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-111",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 60,
+      "direct_evaluations": 76,
+      "cache_hits": 16
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-112",
+      "original_events": 17,
+      "witness_events": 7,
+      "cached_evaluations": 38,
+      "direct_evaluations": 53,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-117",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 44,
+      "direct_evaluations": 57,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-118",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 44,
+      "direct_evaluations": 57,
+      "cache_hits": 13
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-119",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 46,
+      "direct_evaluations": 60,
+      "cache_hits": 14
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-120",
+      "original_events": 17,
+      "witness_events": 6,
+      "cached_evaluations": 46,
+      "direct_evaluations": 60,
+      "cache_hits": 14
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-125",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-126",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-127",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "transactions",
+      "run": "transaction-128",
+      "original_events": 19,
+      "witness_events": 7,
+      "cached_evaluations": 52,
+      "direct_evaluations": 67,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR02-r0-post-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR02-r0-post-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR02-r0-pre-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 51,
+      "direct_evaluations": 61,
+      "cache_hits": 10
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR02-r0-pre-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 51,
+      "direct_evaluations": 61,
+      "cache_hits": 10
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR02-r1-post-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR02-r1-post-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR02-r1-pre-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 51,
+      "direct_evaluations": 61,
+      "cache_hits": 10
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR02-r1-pre-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 51,
+      "direct_evaluations": 61,
+      "cache_hits": 10
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR03-r0-post-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 42,
+      "direct_evaluations": 53,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR03-r0-post-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 42,
+      "direct_evaluations": 53,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR03-r0-pre-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR03-r0-pre-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR03-r1-post-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 42,
+      "direct_evaluations": 53,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR03-r1-post-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 42,
+      "direct_evaluations": 53,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR03-r1-pre-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR03-r1-pre-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR05-r0-post-t1t2",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR05-r0-post-t2t1",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR05-r0-pre-t1t2",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 53,
+      "direct_evaluations": 66,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR05-r0-pre-t2t1",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 53,
+      "direct_evaluations": 66,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR05-r1-post-t1t2",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR05-r1-post-t2t1",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR05-r1-pre-t1t2",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 53,
+      "direct_evaluations": 66,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR05-r1-pre-t2t1",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 53,
+      "direct_evaluations": 66,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR07-r0-post-t1t2",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 56,
+      "direct_evaluations": 71,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR07-r0-post-t2t1",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 56,
+      "direct_evaluations": 71,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR07-r0-pre-t1t2",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 57,
+      "direct_evaluations": 72,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR07-r0-pre-t2t1",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 57,
+      "direct_evaluations": 72,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR07-r1-post-t1t2",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 56,
+      "direct_evaluations": 71,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR07-r1-post-t2t1",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 56,
+      "direct_evaluations": 71,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR07-r1-pre-t1t2",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 57,
+      "direct_evaluations": 72,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTR07-r1-pre-t2t1",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 57,
+      "direct_evaluations": 72,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV02-r0-post-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV02-r0-post-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV02-r0-pre-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 51,
+      "direct_evaluations": 61,
+      "cache_hits": 10
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV02-r0-pre-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 51,
+      "direct_evaluations": 61,
+      "cache_hits": 10
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV02-r1-post-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV02-r1-post-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV02-r1-pre-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 51,
+      "direct_evaluations": 61,
+      "cache_hits": 10
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV02-r1-pre-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 51,
+      "direct_evaluations": 61,
+      "cache_hits": 10
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV03-r0-post-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 42,
+      "direct_evaluations": 53,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV03-r0-post-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 42,
+      "direct_evaluations": 53,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV03-r0-pre-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV03-r0-pre-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV03-r1-post-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 42,
+      "direct_evaluations": 53,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV03-r1-post-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 42,
+      "direct_evaluations": 53,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV03-r1-pre-t1t2",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV03-r1-pre-t2t1",
+      "original_events": 18,
+      "witness_events": 5,
+      "cached_evaluations": 50,
+      "direct_evaluations": 61,
+      "cache_hits": 11
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV05-r0-post-t1t2",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV05-r0-post-t2t1",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV05-r0-pre-t1t2",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 53,
+      "direct_evaluations": 66,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV05-r0-pre-t2t1",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 53,
+      "direct_evaluations": 66,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV05-r1-post-t1t2",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV05-r1-post-t2t1",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 43,
+      "direct_evaluations": 56,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV05-r1-pre-t1t2",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 53,
+      "direct_evaluations": 66,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV05-r1-pre-t2t1",
+      "original_events": 18,
+      "witness_events": 6,
+      "cached_evaluations": 53,
+      "direct_evaluations": 66,
+      "cache_hits": 13
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV07-r0-post-t1t2",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 56,
+      "direct_evaluations": 71,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV07-r0-post-t2t1",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 56,
+      "direct_evaluations": 71,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV07-r0-pre-t1t2",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 57,
+      "direct_evaluations": 72,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV07-r0-pre-t2t1",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 57,
+      "direct_evaluations": 72,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV07-r1-post-t1t2",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 56,
+      "direct_evaluations": 71,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV07-r1-post-t2t1",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 56,
+      "direct_evaluations": 71,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV07-r1-pre-t1t2",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 57,
+      "direct_evaluations": 72,
+      "cache_hits": 15
+    },
+    {
+      "family": "typed-transactions",
+      "run": "typed-HTV07-r1-pre-t2t1",
+      "original_events": 20,
+      "witness_events": 7,
+      "cached_evaluations": 57,
+      "direct_evaluations": 72,
+      "cache_hits": 15
+    }
+  ]
+}

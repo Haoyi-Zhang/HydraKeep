@@ -13,6 +13,7 @@ def interpret(trace: list[dict[str, Any]], contract: dict[str, Any], *, ablation
     expected=None; active=False; first_node=None; removed=False; blocked=0; accepted=0
     failures=[]; inconclusive=[]; intentional=0; reset_seen=set()
     user_reset_seen=False; channel_seen=False; submit_seen=False
+    native_edit=None
     def failure(kind,event,actual):
         key=(kind,event.get('phase'))
         if not any((x['kind'],x['phase'])==key for x in failures):
@@ -23,15 +24,27 @@ def interpret(trace: list[dict[str, Any]], contract: dict[str, Any], *, ablation
         if typ=='native-serialization':submit_seen=True
         if any(f.get('id')!=contract['logical_field'] for f in fields):
             inconclusive.append('observed field does not match declared logical identity');continue
+        if typ in ('native-input','native-change'):
+            native_edit = e
+            continue
         if typ=='edit-blocked':blocked+=1;continue
         if typ=='edit-absent':continue
         if typ=='edit-complete':
+            observed_edit, native_edit = native_edit, None
             if len(fields)!=1:
                 inconclusive.append('ambiguous edit identity' if len(fields)>1 else 'missing edited field');continue
             if fields[0].get('disabled') or fields[0].get('readOnly'):
                 inconclusive.append('an edit was reported on an unavailable field');continue
             if not same_value(e.get('requested'),fields[0]['value']):
                 inconclusive.append('requested edit did not complete');continue
+            native_fields = (observed_edit or {}).get('fields', [])
+            if (observed_edit is None or observed_edit.get('trusted') is not True
+                or len(native_fields) != 1
+                or native_fields[0].get('node') != fields[0]['node']
+                or native_fields[0].get('id') != contract['logical_field']
+                or not same_value(observed_edit.get('eventValue'), e.get('requested'))
+                or not same_value(native_fields[0].get('value'), fields[0]['value'])):
+                inconclusive.append('edit lacks fresh matching trusted input/change evidence');continue
             expected=fields[0]['value'];active=True;first_node=fields[0]['node'];accepted+=1
         if typ not in ['checkpoint','edit-complete','application-intent','native-serialization','application-submitted']:
             continue

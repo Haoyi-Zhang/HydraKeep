@@ -33,16 +33,19 @@ class SliceResult:
     events: tuple[dict[str, Any], ...]
     target: FailureKey
     predicate_evaluations: int
+    predicate_cache_hits: int
     one_minimal: bool
 
 
 class ObligationWitness:
     """Minimize one observed failure while retaining semantic evidence."""
 
-    def __init__(self, contract: dict[str, Any], target: FailureKey):
+    def __init__(self, contract: dict[str, Any], target: FailureKey, *, memoize: bool = True):
         self.contract = contract
         self.target = target
         self.evaluations = 0
+        self.memoize = memoize
+        self.cache_hits = 0
 
     def preserves(self, trace: Iterable[dict[str, Any]]) -> bool:
         self.evaluations += 1
@@ -59,7 +62,21 @@ class ObligationWitness:
 
     def minimize(self, trace: list[dict[str, Any]]) -> SliceResult:
         indexed = list(enumerate(trace))
-        if not self.preserves(event for _, event in indexed):
+        # This cache exists for one immutable observed trace and one fixed
+        # contract/target only. Original indices preserve duplicates and order.
+        memo: dict[tuple[int, ...], bool] = {}
+        self.evaluations = 0
+        self.cache_hits = 0
+        def accepted(rows):
+            key = tuple(index for index, _ in rows)
+            if self.memoize and key in memo:
+                self.cache_hits += 1
+                return memo[key]
+            result = self.preserves(event for _, event in rows)
+            if self.memoize:
+                memo[key] = result
+            return result
+        if not accepted(indexed):
             raise ValueError('Original trace does not preserve the requested failure')
 
         # Classical partition-based deletion, with a semantic predicate.
@@ -69,7 +86,7 @@ class ObligationWitness:
             reduced = False
             for start in range(0, len(indexed), width):
                 candidate = indexed[:start] + indexed[start + width:]
-                if candidate and self.preserves(event for _, event in candidate):
+                if candidate and accepted(candidate):
                     indexed = candidate
                     granularity = max(2, granularity - 1)
                     reduced = True
@@ -87,13 +104,13 @@ class ObligationWitness:
             changed = False
             for position in range(len(indexed)):
                 candidate = indexed[:position] + indexed[position + 1:]
-                if candidate and self.preserves(event for _, event in candidate):
+                if candidate and accepted(candidate):
                     indexed = candidate
                     changed = True
                     break
 
         one_minimal = all(
-            not candidate or not self.preserves(event for _, event in candidate)
+            not candidate or not accepted(candidate)
             for position in range(len(indexed))
             for candidate in [indexed[:position] + indexed[position + 1:]])
         if not one_minimal:
@@ -103,5 +120,6 @@ class ObligationWitness:
             events=tuple(event for _, event in indexed),
             target=self.target,
             predicate_evaluations=self.evaluations,
+            predicate_cache_hits=self.cache_hits,
             one_minimal=True,
         )

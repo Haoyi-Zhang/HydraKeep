@@ -45,6 +45,21 @@ class WitnessTests(unittest.TestCase):
         target[0] = 'not-a-field'
         self.assertFalse(ObligationWitness(contract, tuple(target)).preserves(record['events']))
 
+    def test_cache_preserves_witness_and_is_reset_between_calls(self):
+        for record in self.records[:2]:
+            contract = self.contracts[record['family']][record['case']]
+            target = self.key(record['target'])
+            cached = ObligationWitness(contract, target)
+            direct = ObligationWitness(contract, target, memoize=False)
+            first = cached.minimize(record['events'])
+            other = direct.minimize(record['events'])
+            again = cached.minimize(record['events'])
+            self.assertEqual(first.indices, other.indices)
+            self.assertEqual(first.events, other.events)
+            self.assertEqual(first, again)
+            self.assertLess(first.predicate_evaluations, other.predicate_evaluations)
+            self.assertGreater(first.predicate_cache_hits, 0)
+
     def test_failure_key_is_type_stable(self):
         item = {'field': 'a', 'kind': 'consumer-only-loss', 'phase': 'receipt-t1',
                 'epoch': 0, 'revision': 1, 'transaction': 't1'}

@@ -1,13 +1,21 @@
 import unittest,sys,pathlib,itertools
 sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[1]/'src'))
-from oracle import interpret
+from oracle import interpret as evaluate_observations
 from explorer import grid,quotient,phase_class,ACTIONS,HORIZONS
 
 def event(typ='checkpoint',v='toy',phase='hydrated',node=1,disabled=False,**kw):
     return dict(type=typ,phase=phase,seq=0,fields=[dict(id='toy-field',node=node,value=v,attribute='seed',disabled=disabled,readOnly=False)],**kw)
 def contract(**kw):
     return dict(logical_field='toy-field',initial='seed',policy='preserve-edit',channel='application-intent',**kw)
-def edit(v='toy',**kw):return event('edit-complete',v,requested=v,**kw)
+def edit(v='toy',**kw):
+    return (event('native-input',v,trusted=True,eventValue=v,**kw),
+            event('edit-complete',v,requested=v,**kw))
+
+def interpret(trace, contract, **kwargs):
+    # An edit fixture contains the actual native event and its completion;
+    # tests below concern subsequent obligations, not fabricated edit evidence.
+    observations = [e for item in trace for e in (item if isinstance(item, tuple) else (item,))]
+    return evaluate_observations(observations, contract, **kwargs)
 class OracleTests(unittest.TestCase):
     def test_preserved(self):
         self.assertEqual(interpret([edit(),event('application-intent',submittedValue='toy')],contract())['status'],'clean')

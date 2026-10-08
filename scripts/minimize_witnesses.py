@@ -2,6 +2,7 @@
 """Generate deletion-1-minimal semantic witnesses from all violating browser rows."""
 from __future__ import annotations
 import collections
+import argparse
 import json
 import pathlib
 import statistics
@@ -29,10 +30,15 @@ def load_rows(path: pathlib.Path) -> list[dict[str, Any]]:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--out', type=pathlib.Path, default=OUT)
+    parser.add_argument('--paper-dir', type=pathlib.Path)
+    args = parser.parse_args()
+    out = args.out
     started = time.time_ns()
-    OUT.mkdir(parents=True, exist_ok=True)
+    out.mkdir(parents=True, exist_ok=True)
     records: list[dict[str, Any]] = []
-    with (OUT / 'witnesses.jsonl').open('w') as stream:
+    with (out / 'witnesses.jsonl').open('w') as stream:
         for family, row_path, contract_path in SOURCES:
             contracts = json.loads(contract_path.read_text())
             for row in load_rows(row_path):
@@ -65,6 +71,7 @@ def main() -> None:
                     'reduction_fraction': round(
                         1 - len(reduced) / len(row['trace']), 6),
                     'predicate_evaluations': result.predicate_evaluations,
+                    'predicate_cache_hits': result.predicate_cache_hits,
                     'one_minimal': result.one_minimal,
                     'original_indices': list(result.indices),
                     'diagnosis': {
@@ -106,6 +113,8 @@ def main() -> None:
             record['reduction_fraction'] for record in records), 1),
         'total_predicate_evaluations': sum(
             record['predicate_evaluations'] for record in records),
+        'total_predicate_cache_hits': sum(
+            record['predicate_cache_hits'] for record in records),
         'failure_kinds': dict(collections.Counter(
             record['target']['kind'] for record in records)),
         'families': groups,
@@ -113,17 +122,18 @@ def main() -> None:
         'minimality_scope': ('deletion-1-minimal observed events under one exact '
                              'semantic failure key; values and event order are unchanged'),
     }
-    (OUT / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n')
-    paper = ROOT.parent / 'paper' / 'generated' / 'witnesses'
-    paper.mkdir(parents=True, exist_ok=True)
+    (out / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n')
     macros = {
         'WitnessCount': summary['browser_failure_witnesses'],
         'WitnessMedianOriginal': summary['median_original_events'],
         'WitnessMedianReduced': summary['median_witness_events'],
         'WitnessMedianReduction': summary['median_reduction_percent'],
     }
-    (paper / 'numbers.tex').write_text('\n'.join(
-        f'\\newcommand{{\\{name}}}{{{value}}}' for name, value in macros.items()) + '\n')
+    if args.paper_dir is not None:
+        paper = args.paper_dir / 'generated' / 'witnesses'
+        paper.mkdir(parents=True, exist_ok=True)
+        (paper / 'numbers.tex').write_text('\n'.join(
+            f'\\newcommand{{\\{name}}}{{{value}}}' for name, value in macros.items()) + '\n')
     print(json.dumps(summary, indent=2))
 
 

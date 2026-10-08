@@ -6,7 +6,8 @@
   "median_witness_events": 6.0,
   "median_reduction_percent": 65.0,
   "mean_reduction_percent": 66.6,
-  "total_predicate_evaluations": 8800,
+  "total_predicate_evaluations": 6932,
+  "total_predicate_cache_hits": 1868,
   "failure_kinds": {
     "consumer-only-loss": 96,
     "display-loss": 48
@@ -27,6 +28,6 @@
       "max_witness_events": 7
     }
   },
-  "wall_seconds": 0.859,
+  "wall_seconds": 0.688,
   "minimality_scope": "deletion-1-minimal observed events under one exact semantic failure key; values and event order are unchanged"
 }
