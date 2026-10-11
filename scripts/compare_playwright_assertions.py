@@ -16,14 +16,15 @@ import subprocess
 import sys
 import time
 import urllib.request
-from playwright.sync_api import sync_playwright, expect
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
 from evidence_admission import admit_browser_trace, typed_equal
 from transaction_oracle import interpret_transactions, diagnosis
 from transaction_spec import specify
-from run_transactions import init, load, prerender, edit, CASES, CONTRACTS, ENDPOINT
+CASES = json.loads((ROOT / 'fixtures/transactions/cases.json').read_text())
+CONTRACTS = json.loads((ROOT / 'fixtures/transactions/contracts.json').read_text())
+ENDPOINT = 'http://127.0.0.1:8774'
 
 
 def validate(rows):
@@ -53,6 +54,8 @@ def validate(rows):
 
 
 def execute(browser, cfg, html, gap, order, rep, run):
+    from playwright.sync_api import expect
+    from run_transactions import init, load, edit
     page = browser.new_page()
     errors = []; page.on('pageerror', lambda error: errors.append(str(error)))
     row = dict(case=cfg['id'], framework=cfg['framework'], pattern=cfg['pattern'],
@@ -116,6 +119,8 @@ def execute(browser, cfg, html, gap, order, rep, run):
 
 
 def main():
+    from playwright.sync_api import sync_playwright
+    from run_transactions import prerender
     selected = [c for c in CASES if c['pattern'] in ('snapshot', 'late-read', 'stale-closure')]
     out = ROOT / 'results/assertion-comparison'; out.mkdir(exist_ok=True)
     server = subprocess.Popen(['node', 'src/server.mjs'], cwd=ROOT,
