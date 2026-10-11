@@ -8,6 +8,7 @@ ROOT=pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
 from transaction_oracle import interpret_transactions
 from transaction_spec import specify
+from evidence_admission import admit_browser_trace
 CASES=json.loads((ROOT/'fixtures/typed-transactions/cases.json').read_text())
 CONTRACTS=json.loads((ROOT/'fixtures/typed-transactions/contracts.json').read_text())
 ENDPOINT='http://127.0.0.1:8775'
@@ -15,7 +16,7 @@ ENDPOINT='http://127.0.0.1:8775'
 
 def launch_external_browser(playwright, executable):
     sock=socket.socket();sock.bind(('127.0.0.1',0));port=sock.getsockname()[1];sock.close()
-    profile=tempfile.mkdtemp(prefix='hydrakeep-chromium-')
+    profile=tempfile.mkdtemp(prefix='hydrakeep-chromium-', dir=ROOT.parent / '.browser-profiles')
     command=[executable,'--headless=new','--no-sandbox','--disable-gpu',
              '--remote-debugging-address=127.0.0.1',f'--remote-debugging-port={port}',
              f'--user-data-dir={profile}','about:blank']
@@ -33,18 +34,28 @@ def launch_external_browser(playwright, executable):
         browser=playwright.chromium.connect_over_cdp(endpoint)
         return browser,process,profile
     except Exception:
-        try:os.killpg(process.pid,signal.SIGKILL)
+        try:
+            if os.name == 'nt': process.kill()
+            else: os.killpg(process.pid,signal.SIGKILL)
         except ProcessLookupError:pass
-        shutil.rmtree(profile,ignore_errors=True)
+        target=pathlib.Path(profile).resolve()
+        if target.parent != (ROOT.parent / '.browser-profiles').resolve():
+            raise RuntimeError('Browser profile cleanup escaped the candidate')
+        shutil.rmtree(target,ignore_errors=True)
         raise
 
 
 def stop_external_browser(process,profile):
-    try:os.killpg(process.pid,signal.SIGKILL)
+    try:
+        if os.name == 'nt': process.kill()
+        else: os.killpg(process.pid,signal.SIGKILL)
     except ProcessLookupError:pass
     try:process.wait(timeout=3)
     except subprocess.TimeoutExpired:process.kill();process.wait(timeout=3)
-    shutil.rmtree(profile,ignore_errors=True)
+    target=pathlib.Path(profile).resolve()
+    if target.parent != (ROOT.parent / '.browser-profiles').resolve():
+        raise RuntimeError('Browser profile cleanup escaped the candidate')
+    shutil.rmtree(target,ignore_errors=True)
 
 
 
@@ -149,6 +160,7 @@ def execute(browser,cfg,html,gap,order,rep,run):
             page.evaluate('(data)=>tx.emit("receipt",data)',dict(transaction=tid,consumer=consumer,
                                                                   channel='application',payload=payload))
         row['trace']=page.evaluate('tx.trace')
+        admit_browser_trace(row['trace'],CONTRACTS[cfg['id']])
         row['oracle']=interpret_transactions(row['trace'],CONTRACTS[cfg['id']])
         row['reference']=specify(row['trace'],CONTRACTS[cfg['id']])
         row['page_errors']=errors;row['console']=warnings
@@ -171,6 +183,7 @@ def main():
     parser.add_argument('--rep-offset',type=int,default=0,help='Starting repetition label for sharded runs')
     args=parser.parse_args()
     if args.repeats<1:raise SystemExit('repeats must be positive')
+    (ROOT.parent / '.browser-profiles').mkdir(exist_ok=True)
     default='results/typed-transactions/smoke.jsonl' if args.smoke else 'results/typed-transactions/runs.jsonl'
     output=ROOT/(args.output or default);output.parent.mkdir(parents=True,exist_ok=True)
     patterns=['typed-snapshot','checkbox-coercion','scoped-submit','replacement']

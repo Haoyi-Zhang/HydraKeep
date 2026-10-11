@@ -5,6 +5,7 @@ import collections, copy, csv, itertools, json, math, pathlib, statistics, sys
 ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path[:0]=[str(ROOT/'src'),str(ROOT/'tests')]
 from transaction_oracle import interpret_transactions, diagnosis
 from transaction_spec import specify
+from evidence_admission import admit_browser_trace
 from test_transactions import generated_traces
 OUT=ROOT/'results/transactions'; PAPER=ROOT.parent/'paper/generated/transactions'
 CASES=json.loads((ROOT/'fixtures/transactions/cases.json').read_text())
@@ -43,6 +44,7 @@ def validate(rows):
         require(type(row['duration_ms']) in (int, float) and math.isfinite(row['duration_ms'])
                 and row['duration_ms'] >= 0, 'Invalid measured duration')
         contract=CONTRACTS[row['case']];trace=row['trace']
+        admit_browser_trace(trace, contract)
         result=interpret_transactions(trace,contract);reference=specify(trace,contract)
         require(result==row['oracle'],'Stored monitor result differs')
         require(reference==row['reference'],'Stored specification result differs')
@@ -54,6 +56,7 @@ def validate(rows):
         require([e['transaction'] for e in receipts]==row['dispatch_order'],'Receipt ordering differs')
         require(len(row['server_records'])==2 and len(dispatches)==2,'Missing/duplicate HTTP evidence')
         for observed,record,dispatch in zip(receipts,row['server_records'],dispatches):
+            require(record.get('run') == row['run']+':'+observed['transaction'], 'Receiver run correspondence differs')
             require(observed['transaction']==record['transaction']==dispatch['transaction'],'Transaction correspondence differs')
             require(observed['consumer']==record['consumer']==dispatch['consumer'],'Consumer correspondence differs')
             require(record['contentType'].split(';')[0]=='application/json','Unexpected receiver content type')

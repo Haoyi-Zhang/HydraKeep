@@ -6,6 +6,7 @@ import collections,hashlib,itertools,json,pathlib,subprocess,sys
 from urllib.parse import parse_qs
 ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src'))
 from form_oracle import interpret_form,signature
+from evidence_admission import admit_edits, require
 from multi_explorer import PairSchedule,pair_grid,pair_quotient,representative,independent
 from validation import validate_pair_runs
 OUT=ROOT/'results/native-integration';GEN=ROOT.parent/'paper/generated/native-integration';GEN.mkdir(exist_ok=True,parents=True)
@@ -13,7 +14,7 @@ def read(name):return [json.loads(l) for l in (OUT/(name+'.jsonl')).read_text().
 def load(p):return json.loads((ROOT/p).read_text())
 def counts(rows):return dict(collections.Counter(r['oracle']['status'] for r in rows))
 def sk(r):return PairSchedule(**r['schedule'])
-def native_check(rows,contracts,cases):
+def native_check(rows,contracts,cases,*,require_action_binding=False):
  seen=set()
  versions={'original':{'react':'19.1.1','vue':'3.5.13'},'before':{'vue':'3.5.40'},'after':{'vue':'3.5.41'},'current':{'vue':'3.5.43'}}
  for r in rows:
@@ -25,6 +26,11 @@ def native_check(rows,contracts,cases):
   assert len(r['server_records'])==1
   rec=r['server_records'][0];assert rec['run']==r['run']
   receipt=[e for e in r['trace'] if e['type']=='receipt'];assert len(receipt)==1
+  if require_action_binding:
+   admit_edits(r['trace'],contracts[r['case']])
+   consume=[i for i,e in enumerate(r['trace']) if e['type']=='consume']
+   ri=[i for i,e in enumerate(r['trace']) if e['type']=='receipt']
+   require(len(consume)==len(ri)==1 and consume[0]<ri[0], 'native consume/receipt order')
   if r['native_submit']:
    assert rec['contentType'].startswith('application/x-www-form-urlencoded') and receipt[0]['channel']=='native'
    body=parse_qs(rec['body'],keep_blank_values=True)
@@ -42,7 +48,7 @@ def coverage(rows,case_ids,tags,schedules,reps):
 def main():
  cases={c['id']:c for c in load('fixtures/multi/cases.json')};histcases={c['id']:c for c in load('fixtures/native/historical-cases.json')};contracts=load('fixtures/multi/contracts.json');hc=load('fixtures/native/historical-contracts.json');nc=load('fixtures/native/native-submit-contracts.json')
  matrix=read('matrix-chromium');quotient=read('matrix-quotient-chromium');versions=read('versions-chromium');historical=read('historical-chromium');native=read('native-submit-chromium')
- for rows,cs,configs in [(matrix,contracts,cases),(quotient,contracts,cases),(versions,contracts,cases),(historical,hc,histcases),(native,nc,cases)]:native_check(rows,cs,configs)
+ for rows,cs,configs in [(matrix,contracts,cases),(quotient,contracts,cases),(versions,contracts,cases),(historical,hc,histcases),(native,nc,cases)]:native_check(rows,cs,configs,require_action_binding=rows is native)
  hs=[PairSchedule(1,a,b,'ab' if a<=b else 'ba') for a in [0,1] for b in [0,1]]+[PairSchedule(2,0,0,'ab'),PairSchedule(2,2,2,'ab')]
  ns=[PairSchedule(0,0,0,'ab')]+[s for s in pair_grid() if s.horizon==1]
  cov={n:coverage(rows,ids,tags,schedules,reps) for n,rows,ids,tags,schedules,reps in [
@@ -104,6 +110,10 @@ def main():
   control_summary.append({'case':c,'receiver_runs':len(rr),'monitor_status':rr[0]['oracle']['status'],'initracer_overwrite_reports_per_observation_run':report_counts[0]})
  retained_total=load('results/phase-grid/summary.json')['total_receiver_backed_runs']
  summary={'study':'native-integration','closest_tool_controls':control_summary,'closest_tool_receiver_backed_runs':16,'coverage':cov,'native_matrix_counts':counts(matrix),'native_quotient_runs':len(quotient),'native_quotient_counts':counts(quotient),'native_counts_by_build':{b:counts([r for r in matrix if r['mode']==b]) for b in ['development','production']},'native_legacy_signature_disagreements':0,'native_build_signature_disagreements':0,'native_reduction_validation':reductions,'version_matrix_counts':counts(versions),'version_matrix_signature_disagreements':0,'historical_counts':counts(historical),'historical_repeat_signature_disagreements':0,'historical_build_signature_disagreements':0,'historical_families':ht,'native_submission_counts':counts(native),'native_pre_hydration_counts':counts([r for r in native if sk(r).horizon==0]),'public_profiles':len(public),'public_completed_receipts':len(valid),'receipt_time_only_flags_on_clean_public_traces':len(receipt_time_public),'public_unavailable_profiles':len(screened),'public_counts_by_build':{b:counts([r for r in public if r['mode']==b]) for b in ['development','production']},'new_complete_receiver_backed_runs':len(matrix)+len(quotient)+len(versions)+len(historical)+len(native)+len(valid),'complete_receiver_backed_runs_with_phase_grid':retained_total+len(matrix)+len(quotient)+len(versions)+len(historical)+len(native)+len(valid),'browser':'Chromium 143.0.7499.0','concurrency_note':'Experiments overlapped; wall-time ratios are not speedups.'}
+ summary['browser']='Mixed retained/current Chromium studies; see browser_by_study'
+ summary['browser_by_study']={name:sorted({r.get('browser','143.0.7499.0') for r in rows}) for name,rows in [('matrix',matrix),('versions',versions),('historical',historical),('native-submit',native)]}
+ summary['action_bound_current_native_post_runs']=len(native)
+ summary['legacy_provenance_limit']='Retained matrix/version/historical/public/control observations are not admitted as current action-bound traces'
  (OUT/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
  def tex(name,s):(GEN/name).write_text(s+'\n')
  tex('numbers.tex','\n'.join('\\newcommand{\\HKNative'+k+'}{'+(f'{v:,}' if isinstance(v,int) else str(v))+'}' for k,v in {'Matrix':len(matrix),'Quotient':len(quotient),'Versions':len(versions),'Historical':len(historical),'Submit':len(native),'Public':len(valid),'Unavailable':len(screened),'New':summary['new_complete_receiver_backed_runs'],'Total':summary['complete_receiver_backed_runs_with_phase_grid']}.items()))

@@ -1,17 +1,53 @@
 /* Local observation/transport only. It never computes contract correctness. */
 (() => {
-  const ids = new WeakMap(); let serial = 0;
+  const ids = new WeakMap(); let serial = 0, eventSequence = 0, actionSequence = 0;
+  let editAction = null;
+  const nodeOf = el => {if (!ids.has(el)) ids.set(el, ++serial); return ids.get(el);};
   const tx = window.tx = {trace: [], phase: 'pre', count: 0, pending: new Map(), last: {}};
   tx.fields = () => [...document.querySelectorAll('[data-hk-field]')].map(el => {
-    if (!ids.has(el)) ids.set(el, ++serial);
-    return {id: el.dataset.hkField, node: ids.get(el), value: el.value,
+    return {id: el.dataset.hkField, node: nodeOf(el), value: el.value,
             disabled: el.disabled, readOnly: el.readOnly};
   });
   tx.emit = (type, data = {}) => tx.trace.push({type, ...data, fields: tx.fields(),
                                               phase: tx.phase, ms: performance.now()});
+  tx.beginEdit = (field, requested) => {
+    if (editAction) throw new Error('An edit action is already pending');
+    const targets = tx.fields().filter(item => item.id === field);
+    if (targets.length !== 1 || targets[0].disabled || targets[0].readOnly)
+      throw new Error('Unavailable or ambiguous edit target');
+    delete tx.last[field];
+    editAction = {id: ++actionSequence, field, requested, node: targets[0].node,
+                  before: targets[0].value, sequence: eventSequence};
+    tx.emit('edit-start', {field, requested, action: editAction.id, node: editAction.node});
+    return editAction.id;
+  };
+  tx.completeEdit = action => {
+    if (!editAction || editAction.id !== action) throw new Error('Unknown or completed edit action');
+    const current = editAction, evidence = tx.last[current.field];
+    delete tx.last[current.field]; editAction = null;
+    const targets = tx.fields().filter(item => item.id === current.field), target = targets[0];
+    const available = targets.length === 1 && target.node === current.node &&
+      !target.disabled && !target.readOnly;
+    const fresh = available && evidence?.trusted === true && evidence.action === action &&
+      evidence.sequence > current.sequence && evidence.node === target.node &&
+      Object.is(evidence.value, current.requested) && Object.is(target.value, current.requested);
+    const noop = available && !evidence && Object.is(current.before, current.requested) &&
+      Object.is(target.value, current.requested);
+    if (noop) tx.emit('checkpoint');
+    const type = noop ? 'edit-noop' : 'edit';
+    tx.emit(type, {field: current.field, requested: current.requested, action,
+                   trusted: fresh, nativeSequence: evidence?.sequence ?? null});
+    return type;
+  };
   for (const kind of ['input', 'change']) document.addEventListener(kind, e => {
-    if (e.target.matches('[data-hk-field]'))
-      tx.last[e.target.dataset.hkField] = {trusted: e.isTrusted, value: e.target.value};
+    if (e.target.matches('[data-hk-field]')) {
+      const field = e.target.dataset.hkField;
+      const evidence = {trusted: e.isTrusted, value: e.target.value, node: nodeOf(e.target),
+                        sequence: ++eventSequence, action: editAction?.field === field ? editAction.id : null};
+      tx.last[field] = evidence;
+      tx.emit('native-' + kind, {field, trusted: evidence.trusted, eventValue: evidence.value,
+                                node: evidence.node, sequence: evidence.sequence, action: evidence.action});
+    }
   }, true);
   tx.enqueue = (consumer, reader, onAck) => {
     const id = 't' + (++tx.count);

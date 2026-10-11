@@ -22,6 +22,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
 from transaction_oracle import diagnosis, interpret_transactions
 from transaction_spec import specify
+from evidence_admission import admit_browser_trace
 
 OUT = ROOT / 'results' / 'typed-transactions'
 PAPER = ROOT.parent / 'paper' / 'generated' / 'typed-transactions'
@@ -85,6 +86,7 @@ def validate(rows: list[dict[str, Any]], *, profile: str = 'full') -> dict[tuple
 
         contract = CONTRACTS[row['case']]
         trace = row['trace']
+        admit_browser_trace(trace, contract)
         result = interpret_transactions(trace, contract)
         reference = specify(trace, contract)
         require(result == row['oracle'], 'Stored monitor result differs from recomputation')
@@ -110,6 +112,7 @@ def validate(rows: list[dict[str, Any]], *, profile: str = 'full') -> dict[tuple
                 'Missing or duplicate loopback receiver records')
         for receipt, record, dispatch in zip(receipts, row['server_records'], dispatches):
             tx = receipt['transaction']
+            require(record.get('run') == row['run'] + ':' + tx, 'Receiver run correspondence differs')
             require(tx == record.get('transaction') == dispatch.get('transaction'),
                     'Transaction correspondence differs')
             require(receipt['consumer'] == record.get('consumer') ==

@@ -51,6 +51,10 @@ class TransactionEvidenceTests(unittest.TestCase):
         rows=copy.deepcopy(self.rows);rows[1]['run']=rows[0]['run']
         with self.assertRaises(ValueError):validate(rows)
 
+    def test_receiver_from_another_run_is_rejected(self):
+        rows=copy.deepcopy(self.rows);rows[0]['server_records'][0]['run']='other:t1'
+        with self.assertRaises(ValueError):validate(rows)
+
     def test_type_sensitive_json(self):
         self.assertFalse(typed_json_equal({'x':[True]}, {'x':[1]}))
         self.assertFalse(typed_json_equal({'x':1}, {'x':1.0}))

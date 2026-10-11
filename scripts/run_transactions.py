@@ -11,6 +11,7 @@ from playwright.sync_api import sync_playwright
 ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src'))
 from transaction_oracle import interpret_transactions
 from transaction_spec import specify
+from evidence_admission import admit_browser_trace
 CASES=json.loads((ROOT/'fixtures/transactions/cases.json').read_text())
 CONTRACTS=json.loads((ROOT/'fixtures/transactions/contracts.json').read_text())
 ENDPOINT='http://127.0.0.1:8774'
@@ -43,8 +44,9 @@ def edit(page,fid,value):
     if loc.count()!=1:raise RuntimeError('Non-unique edit target: '+fid)
     if not loc.is_enabled() or loc.get_attribute('readonly') is not None:
         page.evaluate('(field)=>tx.emit("edit-blocked",{field})',fid);return
+    action=page.evaluate('([field,requested])=>tx.beginEdit(field,requested)',[fid,value])
     loc.click();loc.press('ControlOrMeta+A');loc.press_sequentially(value)
-    page.evaluate('([field,requested])=>tx.emit("edit",{field,requested,trusted:tx.last[field]?.trusted===true})',[fid,value])
+    page.evaluate('(action)=>tx.completeEdit(action)',action)
 
 
 def execute(browser,cfg,html,gap,order,rep,run):
@@ -77,6 +79,7 @@ def execute(browser,cfg,html,gap,order,rep,run):
             payload=json.loads(record['body'])
             page.evaluate('(o)=>tx.emit("receipt",o)',dict(transaction=tid,consumer=consumer,channel='application',payload=payload))
         row['trace']=page.evaluate('tx.trace')
+        admit_browser_trace(row['trace'],CONTRACTS[cfg['id']])
         row['oracle']=interpret_transactions(row['trace'],CONTRACTS[cfg['id']])
         row['reference']=specify(row['trace'],CONTRACTS[cfg['id']])
         row['page_errors']=errors;row['console']=warnings

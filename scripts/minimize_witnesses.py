@@ -15,6 +15,7 @@ sys.path.insert(0, str(ROOT / 'src'))
 from transaction_oracle import diagnosis, interpret_transactions
 from transaction_spec import specify
 from witness import ObligationWitness, failure_key
+from evidence_admission import admit_browser_trace
 
 OUT = ROOT / 'results' / 'witnesses'
 SOURCES = [
@@ -42,6 +43,7 @@ def main() -> None:
         for family, row_path, contract_path in SOURCES:
             contracts = json.loads(contract_path.read_text())
             for row in load_rows(row_path):
+                admit_browser_trace(row['trace'], contracts[row['case']])
                 if row['oracle']['status'] != 'violation':
                     continue
                 # Preserve the first recorded semantic failure. Ordering is the

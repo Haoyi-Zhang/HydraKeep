@@ -1,9 +1,9 @@
 {
   "runs": 128,
   "cases": 16,
-  "browser": "144.0.7559.96",
+  "browser": "155.0.8059.39",
   "repeats": 2,
-  "wall_seconds": 58.16200917200001,
+  "wall_seconds": 41.49165099998936,
   "counts": {
     "clean": 48,
     "violation": 80

@@ -1,0 +1,74 @@
+{
+  "reference": 608,
+  "representatives": 482,
+  "per_replay_saved_schedules": 126,
+  "marginal_reduction_percent": 20.723684210526315,
+  "accounting": {
+    "1": {
+      "full_reference_validation_repetitions": 1,
+      "first_strictly_cheaper_round": 5,
+      "rounds": [
+        {
+          "rounds": 1,
+          "full_grid": 608,
+          "validation_plus_replay": 1090
+        },
+        {
+          "rounds": 4,
+          "full_grid": 2432,
+          "validation_plus_replay": 2536
+        },
+        {
+          "rounds": 5,
+          "full_grid": 3040,
+          "validation_plus_replay": 3018
+        },
+        {
+          "rounds": 10,
+          "full_grid": 6080,
+          "validation_plus_replay": 5428
+        },
+        {
+          "rounds": 20,
+          "full_grid": 12160,
+          "validation_plus_replay": 10248
+        }
+      ]
+    },
+    "2": {
+      "full_reference_validation_repetitions": 2,
+      "first_strictly_cheaper_round": 10,
+      "rounds": [
+        {
+          "rounds": 1,
+          "full_grid": 608,
+          "validation_plus_replay": 1698
+        },
+        {
+          "rounds": 4,
+          "full_grid": 2432,
+          "validation_plus_replay": 3144
+        },
+        {
+          "rounds": 5,
+          "full_grid": 3040,
+          "validation_plus_replay": 3626
+        },
+        {
+          "rounds": 10,
+          "full_grid": 6080,
+          "validation_plus_replay": 6036
+        },
+        {
+          "rounds": 20,
+          "full_grid": 12160,
+          "validation_plus_replay": 10856
+        }
+      ]
+    }
+  },
+  "round_definition": "number of representative regression rounds, including initial separate representative validation",
+  "invalidation": "framework, binding, handler, consumer, contract, observer or bounded-profile change requires renewed reference validation",
+  "implementation_limit": "runner reruns its reference; no persistent automatically invalidated quotient cache or measured deployment reuse lifetime",
+  "cost_limit": "schedule counts only; no amortized wall-time result"
+}

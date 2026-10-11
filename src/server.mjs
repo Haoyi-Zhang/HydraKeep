@@ -18,7 +18,7 @@ export function createServer(fixtures){
       }
       if(u.pathname==='/submit'&&req.method==='POST'){
         let body='';for await(const c of req){body+=c;if(body.length>8192)throw new Error('body too large');}
-        const run=u.searchParams.get('run'); const row={contentType:req.headers['content-type'],body,receivedAt:Date.now()};
+        const run=u.searchParams.get('run'); const row={run,contentType:req.headers['content-type'],body,receivedAt:Date.now()};
         records.set(run,[...(records.get(run)||[]),row]);res.writeHead(200,{'Content-Type':'text/html'});res.end('<p>Recorded local toy value</p>');return;
       }
       if(u.pathname==='/records'){res.writeHead(200,{'Content-Type':'application/json'});res.end(JSON.stringify(records.get(u.searchParams.get('run'))||[]));return;}

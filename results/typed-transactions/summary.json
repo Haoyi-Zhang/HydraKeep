@@ -23,7 +23,7 @@
       "clean": 16,
       "violation": 0,
       "consumer_only": 0,
-      "median_ms": 478.685
+      "median_ms": 412.551
     },
     {
       "workflow": "late-read",
@@ -31,7 +31,7 @@
       "clean": 0,
       "violation": 16,
       "consumer_only": 16,
-      "median_ms": 474.132
+      "median_ms": 420.141
     },
     {
       "workflow": "checkbox-coercion",
@@ -39,7 +39,7 @@
       "clean": 0,
       "violation": 16,
       "consumer_only": 16,
-      "median_ms": 495.373
+      "median_ms": 419.743
     },
     {
       "workflow": "scoped-submit",
@@ -47,7 +47,7 @@
       "clean": 16,
       "violation": 0,
       "consumer_only": 0,
-      "median_ms": 466.756
+      "median_ms": 412.004
     },
     {
       "workflow": "overbroad-clear",
@@ -55,7 +55,7 @@
       "clean": 0,
       "violation": 16,
       "consumer_only": 0,
-      "median_ms": 456.549
+      "median_ms": 398.202
     },
     {
       "workflow": "epoch-reset",
@@ -63,7 +63,7 @@
       "clean": 16,
       "violation": 0,
       "consumer_only": 0,
-      "median_ms": 524.224
+      "median_ms": 422.434
     },
     {
       "workflow": "stale-after-reset",
@@ -71,7 +71,7 @@
       "clean": 0,
       "violation": 16,
       "consumer_only": 16,
-      "median_ms": 494.173
+      "median_ms": 409.667
     },
     {
       "workflow": "replacement",
@@ -79,7 +79,7 @@
       "clean": 16,
       "violation": 0,
       "consumer_only": 0,
-      "median_ms": 501.057
+      "median_ms": 434.169
     }
   ],
   "ablations": [

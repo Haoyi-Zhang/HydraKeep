@@ -73,6 +73,10 @@ class TypedTransactionEvidenceTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             validate(rows)
 
+    def test_receiver_run_binding_rejected(self):
+        rows=copy.deepcopy(self.rows);rows[0]['server_records'][0]['run']='other:t1'
+        with self.assertRaises(ValueError):validate(rows)
+
     def test_hidden_browser_error_rejected(self):
         rows = copy.deepcopy(self.rows)
         rows[0]['page_errors'] = ['synthetic error']

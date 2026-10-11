@@ -22,7 +22,7 @@
   const tx = window.tx = {trace: [], phase: 'pre', count: 0, pending: new Map(), last: {}, valueOf};
   tx.fields = () => [...document.querySelectorAll('[data-hk-field]')].map(el => {
     return {id: el.dataset.hkField, node: nodeOf(el), value: valueOf(el), control: kindOf(el),
-            disabled: el.disabled, readOnly: el.readOnly};
+            disabled: el.disabled, readOnly: !!el.readOnly};
   });
   tx.emit = (type, data = {}) => tx.trace.push({type, ...data, fields: tx.fields(),
                                                 phase: tx.phase, ms: performance.now()});

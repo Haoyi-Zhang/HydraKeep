@@ -49,7 +49,7 @@
       "clean": 16,
       "violation": 0,
       "consumer_only": 0,
-      "median_ms": 429.963
+      "median_ms": 284.715
     },
     {
       "workflow": "late-read",
@@ -57,7 +57,7 @@
       "clean": 0,
       "violation": 16,
       "consumer_only": 16,
-      "median_ms": 425.923
+      "median_ms": 291.972
     },
     {
       "workflow": "stale-closure",
@@ -65,7 +65,7 @@
       "clean": 0,
       "violation": 16,
       "consumer_only": 16,
-      "median_ms": 431.776
+      "median_ms": 286.081
     },
     {
       "workflow": "ack-clear",
@@ -73,7 +73,7 @@
       "clean": 0,
       "violation": 16,
       "consumer_only": 0,
-      "median_ms": 415.016
+      "median_ms": 294.261
     },
     {
       "workflow": "scoped-submit",
@@ -81,7 +81,7 @@
       "clean": 16,
       "violation": 0,
       "consumer_only": 0,
-      "median_ms": 419.094
+      "median_ms": 294.912
     },
     {
       "workflow": "overbroad-clear",
@@ -89,7 +89,7 @@
       "clean": 0,
       "violation": 16,
       "consumer_only": 0,
-      "median_ms": 400.652
+      "median_ms": 293.347
     },
     {
       "workflow": "epoch-reset",
@@ -97,7 +97,7 @@
       "clean": 16,
       "violation": 0,
       "consumer_only": 0,
-      "median_ms": 462.313
+      "median_ms": 309.191
     },
     {
       "workflow": "stale-after-reset",
@@ -105,7 +105,7 @@
       "clean": 0,
       "violation": 16,
       "consumer_only": 16,
-      "median_ms": 465.942
+      "median_ms": 322.072
     }
   ],
   "scope": "offline-document real-browser transaction study with loopback HTTP receivers; separate from native-SSR navigation evidence"

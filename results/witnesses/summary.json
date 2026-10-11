@@ -2,12 +2,12 @@
   "browser_failure_witnesses": 144,
   "target_failures_preserved": 144,
   "one_minimal_witnesses": 144,
-  "median_original_events": 18.0,
-  "median_witness_events": 6.0,
-  "median_reduction_percent": 65.0,
-  "mean_reduction_percent": 66.6,
-  "total_predicate_evaluations": 6932,
-  "total_predicate_cache_hits": 1868,
+  "median_original_events": 41.0,
+  "median_witness_events": 18.0,
+  "median_reduction_percent": 58.1,
+  "mean_reduction_percent": 57.5,
+  "total_predicate_evaluations": 21868,
+  "total_predicate_cache_hits": 5380,
   "failure_kinds": {
     "consumer-only-loss": 96,
     "display-loss": 48
@@ -15,19 +15,19 @@
   "families": {
     "transactions": {
       "witnesses": 80,
-      "median_original_events": 17.0,
-      "median_witness_events": 6.0,
-      "median_reduction_percent": 64.7,
-      "max_witness_events": 7
+      "median_original_events": 41.0,
+      "median_witness_events": 18.0,
+      "median_reduction_percent": 58.1,
+      "max_witness_events": 18
     },
     "typed-transactions": {
       "witnesses": 64,
-      "median_original_events": 18.0,
-      "median_witness_events": 5.5,
-      "median_reduction_percent": 69.4,
-      "max_witness_events": 7
+      "median_original_events": 43.0,
+      "median_witness_events": 19.0,
+      "median_reduction_percent": 55.3,
+      "max_witness_events": 21
     }
   },
-  "wall_seconds": 0.688,
+  "wall_seconds": 0.919,
   "minimality_scope": "deletion-1-minimal observed events under one exact semantic failure key; values and event order are unchanged"
 }

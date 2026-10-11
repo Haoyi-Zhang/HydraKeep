@@ -20,6 +20,11 @@ import time
 from typing import Any
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'src'))
+from evidence_admission import admit_browser_trace
+from transaction_oracle import interpret_transactions
+from transaction_spec import specify
+CONTRACTS = json.loads((ROOT / 'fixtures/typed-transactions/contracts.json').read_text())
 CASES = json.loads((ROOT / "fixtures/typed-transactions/cases.json").read_text())
 OUT = ROOT / "results/typed-transactions"
 SHARDS = OUT / "shards"
@@ -51,6 +56,11 @@ def validate_shard(case: dict[str, Any], rep: int, path: pathlib.Path) -> tuple[
     cells: set[tuple[str, tuple[str, str]]] = set()
     run_ids: set[str] = set()
     for row in rows:
+        contract = CONTRACTS[case['id']]
+        admit_browser_trace(row['trace'], contract)
+        if (interpret_transactions(row['trace'], contract) != row.get('oracle') or
+                specify(row['trace'], contract) != row.get('reference')):
+            raise RuntimeError(f"{path}: recomputed interpreters differ")
         if row.get("case") != case["id"] or row.get("rep") != rep:
             raise RuntimeError(f"{path}: case/repetition mismatch")
         if row.get("framework") != case["framework"] or row.get("pattern") != case["pattern"]:

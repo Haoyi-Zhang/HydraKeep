@@ -176,6 +176,22 @@
   },
   "new_complete_receiver_backed_runs": 4366,
   "complete_receiver_backed_runs_with_phase_grid": 7738,
-  "browser": "Chromium 143.0.7499.0",
-  "concurrency_note": "Experiments overlapped; wall-time ratios are not speedups."
+  "browser": "Mixed retained/current Chromium studies; see browser_by_study",
+  "concurrency_note": "Experiments overlapped; wall-time ratios are not speedups.",
+  "browser_by_study": {
+    "matrix": [
+      "143.0.7499.0"
+    ],
+    "versions": [
+      "143.0.7499.0"
+    ],
+    "historical": [
+      "143.0.7499.0"
+    ],
+    "native-submit": [
+      "155.0.8059.39"
+    ]
+  },
+  "action_bound_current_native_post_runs": 56,
+  "legacy_provenance_limit": "Retained matrix/version/historical/public/control observations are not admitted as current action-bound traces"
 }

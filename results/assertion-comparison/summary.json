@@ -1,0 +1,15 @@
+{
+  "browser": "155.0.8059.39",
+  "runs": 48,
+  "receipts": 96,
+  "cells": 24,
+  "repetitions": 2,
+  "configurations": 6,
+  "patterns": 3,
+  "status_counts": {
+    "clean": 16,
+    "violation": 32
+  },
+  "assertion_monitor_status_disagreements": 0,
+  "scope": "same executions; explicit text-value and immutable receiver-snapshot assertions; no reset, removal or throughput comparison"
+}

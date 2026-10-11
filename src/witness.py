@@ -13,6 +13,7 @@ from typing import Any, Iterable
 
 from transaction_oracle import diagnosis, interpret_transactions
 from transaction_spec import specify
+from evidence_admission import admit_browser_trace
 
 FailureKey = tuple[str, str, str, int, int, str]
 
@@ -51,6 +52,7 @@ class ObligationWitness:
         self.evaluations += 1
         candidate = list(trace)
         try:
+            admit_browser_trace(candidate, self.contract)
             monitor = interpret_transactions(candidate, self.contract)
             specification = specify(candidate, self.contract)
         except (KeyError, TypeError, ValueError, IndexError):

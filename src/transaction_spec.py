@@ -4,6 +4,7 @@ Unlike the implementation, each observation is interpreted from its entire event
 prefix and each receipt independently finds its matching consumption. The test
 generator supplies valid identities and user actions. Protocol rejection is tested
 separately; this specification is not an alternate evidence validator.
+Current browser analysis calls evidence_admission before invoking either model.
 """
 from __future__ import annotations
 from typing import Any

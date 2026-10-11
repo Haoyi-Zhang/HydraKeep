@@ -5,6 +5,7 @@ import pathlib,sys,json,subprocess,time,urllib.request,os,collections,argparse
 from playwright.sync_api import sync_playwright
 ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src'))
 from form_oracle import interpret_form,signature
+from evidence_admission import admit_edits
 from multi_explorer import pair_grid,pair_quotient,independent
 CASES=json.loads((ROOT/'fixtures/multi/cases.json').read_text());CONTRACTS=json.loads((ROOT/'fixtures/multi/contracts.json').read_text());EFFECTS=json.loads((ROOT/'results/phase-grid/effects.json').read_text())['effects']
 ENDPOINT='http://127.0.0.1:8766';counter=0
@@ -28,10 +29,11 @@ def edit(p,f):
  if loc.count()==0:p.evaluate('(field)=>hk.emit("edit-absent",{field})',f['id']);return
  if loc.count()!=1:raise RuntimeError('ambiguous browser edit target')
  if not loc.is_enabled():p.evaluate('(field)=>hk.emit("edit-blocked",{field})',f['id']);return
+ action=p.evaluate('(f)=>hk.beginEdit(f.id,f.edit)',f)
  if f['kind']=='checkbox':loc.click()
  elif f['kind']=='select':loc.focus();loc.press('Home');loc.press('ArrowDown');loc.press('Enter')
  else:loc.click();loc.press('ControlOrMeta+A');loc.press_sequentially(f['edit'])
- p.evaluate('(f)=>hk.emit("edit",{field:f.id,requested:f.edit,trusted:hk.last[f.id]?.trusted===true})',f)
+ p.evaluate('(action)=>hk.completeEdit(action)',action)
 
 def execute(b,cfg,s,html,rep=0):
  start=time.perf_counter();p=b.new_page();errors=[];console=[];p.on('pageerror',lambda e:errors.append(str(e)));p.on('console',lambda m:console.append(m.text) if m.type in ['error','warning'] else None)
@@ -53,6 +55,7 @@ def execute(b,cfg,s,html,rep=0):
   if len(records)!=1:raise RuntimeError('missing or duplicate receipt')
   payload=json.loads(records[0]['body']);p.evaluate('(payload)=>hk.emit("receipt",{payload,channel:"application"})',payload)
   row['trace']=p.evaluate('hk.trace');row['oracle']=interpret_form(row['trace'],CONTRACTS[cfg['id']]);row['console']=console;row['page_errors']=errors
+  admit_edits(row['trace'],CONTRACTS[cfg['id']])
   if errors:row['oracle']['status']='inconclusive';row['oracle']['unknown']+=errors
  except Exception as e:row.update(error=str(e),oracle={'status':'inconclusive','failures':[],'unknown':[str(e)],'accepted_edits':0,'blocked_edits':0,'receipts':0})
  finally:p.close()

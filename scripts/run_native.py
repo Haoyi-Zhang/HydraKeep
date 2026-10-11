@@ -5,6 +5,7 @@ import argparse,collections,hashlib,json,os,pathlib,subprocess,sys,time,urllib.r
 from playwright.sync_api import sync_playwright
 ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src'))
 from form_oracle import interpret_form,signature
+from evidence_admission import admit_edits, require
 from multi_explorer import pair_grid,pair_quotient,independent
 CASES=json.loads((ROOT/'fixtures/multi/cases.json').read_text());HISTORICAL=json.loads((ROOT/'fixtures/native/historical-cases.json').read_text());CONTRACTS={**json.loads((ROOT/'fixtures/multi/contracts.json').read_text()),**json.loads((ROOT/'fixtures/native/historical-contracts.json').read_text())};EFFECTS=json.loads((ROOT/'results/phase-grid/effects.json').read_text())['effects']
 NATIVE_CONTRACTS=json.loads((ROOT/'fixtures/native/native-submit-contracts.json').read_text())
@@ -15,10 +16,11 @@ def edit(p,f):
  if loc.count()==0:p.evaluate('(field)=>hk.emit("edit-absent",{field})',f['id']);return
  if loc.count()!=1:raise RuntimeError('ambiguous target')
  if not loc.is_enabled():p.evaluate('(field)=>hk.emit("edit-blocked",{field})',f['id']);return
+ action=p.evaluate('(f)=>hk.beginEdit(f.id,f.edit)',f)
  if f['kind']=='checkbox':loc.click()
  elif f['kind']=='select':loc.focus();loc.press('Home');loc.press('ArrowDown');loc.press('Enter')
  else:loc.click();loc.press('ControlOrMeta+A');loc.press_sequentially(f['edit'])
- p.evaluate('(f)=>hk.emit("edit",{field:f.id,requested:f.edit,trusted:hk.last[f.id]?.trusted===true})',f)
+ p.evaluate('(action)=>hk.completeEdit(action)',action)
 def run(browser,cfg,s,mode,tag,rep,ordinal,native=False,adapter=None):
  start=time.perf_counter();p=browser.new_page();p.set_default_timeout(6000);errors=[];console=[]
  p.on('pageerror',lambda e:errors.append(str(e)));p.on('console',lambda m:console.append({'type':m.type,'text':m.text}) if m.type in ['error','warning'] else None)
@@ -56,6 +58,10 @@ def run(browser,cfg,s,mode,tag,rep,ordinal,native=False,adapter=None):
   else:payload=json.loads(records[0]['body'])
   channel='native' if native else 'application'
   p.evaluate('(q)=>hk.emit("receipt",q)',dict(payload=payload,channel=channel));row['trace']=p.evaluate('hk.trace');row['contract_channel']=channel;row['oracle']=interpret_form(row['trace'],(NATIVE_CONTRACTS if native else CONTRACTS)[cfg['id']])
+  admit_edits(row['trace'], (NATIVE_CONTRACTS if native else CONTRACTS)[cfg['id']])
+  consumes=[i for i,e in enumerate(row['trace']) if e['type']=='consume']
+  receipts=[i for i,e in enumerate(row['trace']) if e['type']=='receipt']
+  require(len(consumes)==len(receipts)==1 and consumes[0]<receipts[0], 'native consume/receipt order')
   if errors:row['oracle']['unknown']+=errors;row['oracle']['status']='inconclusive'
  except Exception as e:row.update(error=str(e),oracle={'status':'inconclusive','failures':[],'unknown':[str(e)],'accepted_edits':0,'blocked_edits':0,'receipts':0})
  finally:row['console']=console;row['page_errors']=errors;p.close()

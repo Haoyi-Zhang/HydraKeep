@@ -4,6 +4,8 @@ This module does not import fixtures, browser adapters, the legacy interpreter,
 source-effect hints, or the declarative specification. Inputs are observations,
 not predictions. A completed finite trace needs one receipt per consumption and
 coverage of its last live edit. Incomplete evidence is never a clean result.
+Browser callers must first use evidence_admission: this conditional semantic
+interpreter does not authenticate native-event/action bindings or dispatch order.
 """
 from __future__ import annotations
 from copy import deepcopy

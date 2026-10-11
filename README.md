@@ -14,7 +14,7 @@ consumer transactions to actual loopback receiver payloads.
   and the licensed external Next.js example with provenance;
 - `scripts/`: browser execution, isolated typed-matrix orchestration, analysis,
   compatibility checking, source recovery, figure generation, and paper audit;
-- `tests/`: 145 unit, finite-model, corruption-rejection, compatibility, and
+- `tests/`: unit, finite-model, corruption-rejection, compatibility, and
   witness-minimality tests;
 - `results/`: canonical raw browser/receiver records, summaries, environments,
   generated model checks, witnesses, and structural audits;
@@ -33,6 +33,7 @@ python scripts/analyze_transactions.py
 python scripts/analyze_typed_transactions.py
 python scripts/minimize_witnesses.py
 python scripts/check_profile_compatibility.py
+python scripts/scheduling_amortization.py
 ```
 
 In the full project, the parent Makefile runs the analysis/build gates in
@@ -41,6 +42,13 @@ Missing or duplicate schedule
 cells, malformed typed bodies, mismatched transaction/consumer links, browser
 errors, stale stored verdicts, specification disagreement, and compatibility
 drift fail the analysis.
+
+Browser transaction rows first pass `src/evidence_admission.py`. Each completion
+must cite a fresh trusted native event from its own action-start record, with the
+same logical field, physical node and typed value. Consumption must precede
+dispatch, acknowledgment and receipt for each transaction. Evidence rejection
+raises an error; it is not a preservation verdict. The incremental and prefix
+interpreters remain conditional semantic models and are not provenance validators.
 
 ## Transaction profiles
 
@@ -56,18 +64,43 @@ executes each configuration and repetition in a separate Chromium process.  A
 shard is committed only after exactly four schedule cells, eight receipts,
 repeat-stable diagnoses, and independent-prefix agreement are present.
 
-The two profiles contain 256 canonical browser runs and 512 receiver records.
+The current two profiles contain 256 canonical browser runs and 512 receiver records,
+collected with Chromium 155.0.8059.39 and Playwright 1.57.0.
 Their raw records live in `results/transactions` and
 `results/typed-transactions`; `results/witnesses` contains 144 exact-key,
-deletion-1-minimal reductions.
+deletion-1-minimal, admission-preserving reductions (median 41 to 18 events).
+The existing `shards/` files are older saved executions, not the source of this
+current combined matrix. `run_typed_matrix.py --reuse` must not be used to admit
+those older records: rerun shards with the current observer and gate instead.
 
 ## Native and external evidence
 
 `results/native-integration` contains native SSR, build, version, historical,
 native-submit, public-form, and direct InitRacer control records.  These studies
 require normal loopback document navigation and pinned Node dependencies to
-rerun.  The saved records retain their environment data and can be reanalyzed
-without reconstructing the original runtime.
+rerun. The native HTML POST file has been regenerated: 56 current action-bound
+native-SSR/native-submission executions retain actual URL-encoded receiver bodies.
+Other native/version/historical/public records retain the older observer evidence;
+receiver and semantic reanalysis does not upgrade their action provenance.
+
+```sh
+python scripts/run_transactions.py
+python scripts/run_typed_transactions.py
+python scripts/run_native.py --study native-submit --repeats 1
+python scripts/compare_playwright_assertions.py
+```
+
+The last command performs a separate 48-run same-execution comparison on snapshot,
+late-read and stale-closure two-text workflows. Ordinary live-value and immutable
+receiver-snapshot assertions agree with the monitor on 16 clean and 32 violating
+runs; this is not a reset/removal or throughput comparison.
+
+The 608-to-482 schedule reduction excludes validation. Counting one full setup
+validation, the first schedule-count saving occurs at five representative rounds;
+with the retained offline study's two setup validations, at ten. The current
+runner has no persistent automatically invalidated quotient cache. Any framework,
+binding, handler, consumer, contract, observer or bounded-profile change requires
+renewed full-grid validation. No amortized deployment wall-time benefit is measured.
 
 ## Evidence classes
 

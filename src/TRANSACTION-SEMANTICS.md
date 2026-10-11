@@ -9,6 +9,16 @@ observer premises; the monitor does not prove the browser adapter honest. The
 HTTP evidence gate checks request bodies against receipt events and recorded
 transaction correspondence. Missing/duplicate identities or receipts are not clean.
 
+Current browser admission additionally binds action-start, native-event sequence,
+logical and physical target, trust flag, requested value and completed live value.
+It requires consume < dispatch < acknowledgment < receipt within each transaction;
+different transaction receipt orders remain allowed. Missing bindings, bad values
+or inverted chains raise an evidence-rejection error before semantic interpretation.
+The prefix specification and finite model traces assume well-formed input; their
+agreement alone is not provenance validation. Older retained records lacking these
+fields are not upgraded by inference. Internal consistency cannot authenticate an
+observer that fabricates all of the mutually matching records.
+
 A field has an epoch e (number of permitted reset/removal transitions), a revision
 r (number of accepted edits), and a most recent expected value v. A consumer c
 specifies a field scope S_c and a display-release subset L_c contained in S_c.
