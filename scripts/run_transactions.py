@@ -44,8 +44,22 @@ def edit(page,fid,value):
     if loc.count()!=1:raise RuntimeError('Non-unique edit target: '+fid)
     if not loc.is_enabled() or loc.get_attribute('readonly') is not None:
         page.evaluate('(field)=>tx.emit("edit-blocked",{field})',fid);return
+    kind=loc.evaluate("(el)=>el.tagName==='TEXTAREA'?'textarea':el.tagName==='INPUT'?el.type:el.tagName.toLowerCase()")
+    if kind not in ('text','textarea','email'):raise RuntimeError('Control is outside the transaction text profile')
+    if type(value) is not str:raise RuntimeError('Text request must be a string')
+    if any(ord(char)<32 or ord(char)==127 for char in value):
+        raise RuntimeError('Control characters are outside the transaction text profile')
+    if kind=='email' and value!=value.strip(' '):
+        raise RuntimeError('Email whitespace normalization is outside the transaction text profile')
+    maximum=loc.get_attribute('maxlength')
+    if maximum is not None and int(maximum)>=0 and len(value.encode('utf-16-le'))//2>int(maximum):
+        raise RuntimeError('Text request exceeds maxlength')
+    if loc.input_value()==value:raise RuntimeError('No-op request cannot create a native edit')
     action=page.evaluate('([field,requested])=>tx.beginEdit(field,requested)',[fid,value])
-    loc.click();loc.press('ControlOrMeta+A');loc.press_sequentially(value)
+    loc.click();loc.press('ControlOrMeta+A')
+    if value=='':loc.press('Backspace')
+    else:loc.press_sequentially(value)
+    if loc.input_value()!=value:raise RuntimeError('Native edit did not reach requested value')
     page.evaluate('(action)=>tx.completeEdit(action)',action)
 
 

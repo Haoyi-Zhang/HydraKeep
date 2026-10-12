@@ -26,10 +26,43 @@ def edit(p,f):
   if f['kind'] not in ('text','textarea','email'):
    raise RuntimeError('readonly applicability is outside the native scalar profile')
   p.evaluate('(field)=>hk.emit("edit-blocked",{field})',f['id']);return
+ value=f['edit']
+ if f['kind']=='checkbox':
+  if type(value) is not bool:raise RuntimeError('checkbox request must be Boolean')
+  before=loc.is_checked()
+ elif f['kind']=='select':
+  if type(value) is not str:raise RuntimeError('select request must be a string')
+  options=loc.locator('option').evaluate_all('''(nodes)=>nodes.map(node=>({value:node.value,
+   blocked:node.disabled||node.hidden||node.parentElement.tagName!=='SELECT'||
+    getComputedStyle(node).display==='none'||getComputedStyle(node).visibility!=='visible'}))''')
+  matches=[i for i,option in enumerate(options) if option['value']==value]
+  if len(matches)!=1:raise RuntimeError('Unknown or ambiguous select option: '+value)
+  if any(option['blocked'] for option in options):
+   raise RuntimeError('disabled, hidden or grouped options are outside the native select profile')
+  option_index=matches[0];before=loc.input_value()
+ else:
+  if type(value) is not str:raise RuntimeError('text request must be a string')
+  if any(ord(char)<32 or ord(char)==127 for char in value):
+   raise RuntimeError('control characters are outside the native text profile')
+  if f['kind']=='email' and value!=value.strip(' '):
+   raise RuntimeError('email whitespace normalization is outside the native text profile')
+  maximum=loc.get_attribute('maxlength')
+  if maximum is not None and int(maximum)>=0 and len(value.encode('utf-16-le'))//2>int(maximum):
+   raise RuntimeError('text request exceeds maxlength')
+  before=loc.input_value()
+ if before==value:raise RuntimeError('No-op request cannot create a native edit')
  action=p.evaluate('(f)=>hk.beginEdit(f.id,f.edit)',f)
  if f['kind']=='checkbox':loc.click()
- elif f['kind']=='select':loc.focus();loc.press('Home');loc.press('ArrowDown');loc.press('Enter')
- else:loc.click();loc.press('ControlOrMeta+A');loc.press_sequentially(f['edit'])
+ elif f['kind']=='select':
+  loc.focus();loc.press('Home')
+  for _ in range(option_index):loc.press('ArrowDown')
+  loc.press('Enter')
+ else:
+  loc.click();loc.press('ControlOrMeta+A')
+  if value=='':loc.press('Backspace')
+  else:loc.press_sequentially(value)
+ actual=loc.is_checked() if f['kind']=='checkbox' else loc.input_value()
+ if actual!=value:raise RuntimeError('Native edit did not reach requested value')
  p.evaluate('(action)=>hk.completeEdit(action)',action)
 def run(browser,cfg,s,mode,tag,rep,ordinal,native=False,adapter=None):
  start=time.perf_counter();p=browser.new_page();p.set_default_timeout(6000);errors=[];console=[]

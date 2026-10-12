@@ -125,12 +125,14 @@ class TypedEditActionTests(unittest.TestCase):
         calls = []
 
         class Page:
+            def __init__(self, checked): self.checked = checked
             def locator(self, selector): return self
             def count(self): return 1
             def is_enabled(self): return True
             def get_attribute(self, name): return None
-            def check(self): calls.append(('check', None))
-            def uncheck(self): calls.append(('uncheck', None))
+            def is_checked(self): return self.checked
+            def check(self): calls.append(('check', None)); self.checked = True
+            def uncheck(self): calls.append(('uncheck', None)); self.checked = False
             def evaluate(self, source, argument):
                 calls.append((source, argument))
                 if 'control' in source: return 'checkbox'
@@ -138,12 +140,14 @@ class TypedEditActionTests(unittest.TestCase):
 
         for value, operation in ((True, 'check'), (False, 'uncheck')):
             calls.clear()
-            namespace['edit'](Page(), 'agree', value)
+            page = Page(checked=not value)
+            namespace['edit'](page, 'agree', value)
             self.assertIn('tx.beginEdit', calls[1][0])
             self.assertEqual(calls[1][1], ['agree', value])
             self.assertEqual(calls[2][0], operation)
             self.assertIn('tx.completeEdit', calls[3][0])
             self.assertEqual(calls[3][1], 37)
+            self.assertIs(page.checked, value)
 
 
 if __name__ == '__main__':

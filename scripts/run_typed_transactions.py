@@ -100,20 +100,47 @@ def edit(page,fid,value:Any):
     if not loc.is_enabled() or loc.get_attribute('readonly') is not None:
         page.evaluate('(field)=>tx.emit("edit-blocked",{field})',fid);return
     kind=page.evaluate('(field)=>tx.fields().find(item=>item.id===field)?.control',fid)
+    if kind=='checkbox':
+        if type(value) is not bool:raise RuntimeError('Checkbox request must be Boolean')
+        before=loc.is_checked()
+    elif kind == 'select-one':
+        if type(value) is not str:raise RuntimeError('Select request must be a string')
+        options=loc.locator('option').evaluate_all('''(nodes)=>nodes.map(node=>({value:node.value,label:node.label.trim(),
+          blocked:node.disabled||node.hidden||node.parentElement.tagName!=='SELECT'||
+            getComputedStyle(node).display==='none'||getComputedStyle(node).visibility!=='visible'}))''')
+        matches=[option for option in options if option['value']==value]
+        if len(matches)!=1:raise RuntimeError('Unknown or ambiguous select option: '+value)
+        if any(option['blocked'] for option in options):
+            raise RuntimeError('Disabled, hidden or grouped options are outside this select profile')
+        key=matches[0]['label'][:1].lower()
+        if (key not in 'abcdefghijklmnopqrstuvwxyz0123456789' or not key or
+                sum(option['label'][:1].lower()==key for option in options)!=1):
+            raise RuntimeError('Select option lacks a unique ASCII letter/digit key')
+        before=loc.input_value()
+    elif kind in ('text','textarea','email'):
+        if type(value) is not str:raise RuntimeError('Text request must be a string')
+        if any(ord(char)<32 or ord(char)==127 for char in value):
+            raise RuntimeError('Control characters are outside the typed text profile')
+        if kind=='email' and value!=value.strip(' '):
+            raise RuntimeError('Email whitespace normalization is outside the typed text profile')
+        maximum=loc.get_attribute('maxlength')
+        if maximum is not None and int(maximum)>=0 and len(value.encode('utf-16-le'))//2>int(maximum):
+            raise RuntimeError('Text request exceeds maxlength')
+        before=loc.input_value()
+    else:raise RuntimeError('Control is outside the typed scalar profile')
+    if before==value:raise RuntimeError('No-op request cannot create a native edit')
     action=page.evaluate('([field,requested])=>tx.beginEdit(field,requested)',[fid,value])
     if kind=='checkbox':
         (loc.check if value else loc.uncheck)()
-    elif kind == 'select-one':
-        options=loc.locator('option').evaluate_all('(nodes)=>nodes.map(node=>node.value)')
-        if value not in options:raise RuntimeError('Unknown select option: '+str(value))
-        # All profile options have distinct first letters. A real key press changes
-        # the native selection without opening a browser-owned popup.
-        loc.focus();page.keyboard.press(str(value)[0])
-        if loc.input_value()!=str(value):raise RuntimeError('Native select did not reach requested value: '+str(value))
-    elif kind == 'select-multiple':
-        raise RuntimeError('Multiple select is outside this profile')
+    elif kind=='select-one':
+        # Keep the profile's real key press; reject ambiguous type-ahead before beginEdit.
+        loc.focus();page.keyboard.press(key)
     else:
-        loc.click();loc.press('ControlOrMeta+A');loc.press_sequentially(str(value))
+        loc.click();loc.press('ControlOrMeta+A')
+        if value=='':loc.press('Backspace')
+        else:loc.press_sequentially(value)
+    actual=loc.is_checked() if kind=='checkbox' else loc.input_value()
+    if actual!=value:raise RuntimeError('Native edit did not reach requested value')
     page.evaluate('(action)=>tx.completeEdit(action)',action)
 
 

@@ -14,8 +14,16 @@ class Page:
         self.multiple = multiple
         self.error = error
         self.calls = []
+        self.value = 'seed'
+        self.checked = False
+        self.options = ['A', 'B']
 
     def locator(self, selector):
+        if selector == 'option':
+            class Options:
+                def evaluate_all(inner, source):
+                    return [dict(value=value, blocked=False) for value in self.options]
+            return Options()
         self.calls.append(('locator', selector))
         return self
 
@@ -24,6 +32,15 @@ class Page:
 
     def is_enabled(self):
         return self.enabled
+
+    def get_attribute(self, name):
+        return None
+
+    def input_value(self):
+        return self.value
+
+    def is_checked(self):
+        return self.checked
 
     def evaluate(self, source, argument=None):
         if 'readOnly' in source:
@@ -45,15 +62,23 @@ class Page:
 
     def click(self):
         self.calls.append(('click', None))
+        self.checked = not self.checked
 
     def focus(self):
         self.calls.append(('focus', None))
 
     def press(self, key):
         self.calls.append(('press', key))
+        if key == 'Home':
+            self.value = self.options[0]
+        elif key == 'ArrowDown':
+            self.value = self.options[self.options.index(self.value) + 1]
+        elif key == 'Backspace':
+            self.value = ''
 
     def press_sequentially(self, value):
         self.calls.append(('type', value))
+        self.value = value
 
 
 class NativeEditDriverTests(unittest.TestCase):
@@ -97,17 +122,21 @@ class NativeEditDriverTests(unittest.TestCase):
                                  ['locator', 'availability', 'begin', 'click', 'press', 'type', 'complete'])
                 self.assertEqual(page.calls[-3:],
                                  [('press', 'ControlOrMeta+A'), ('type', 'toy'), ('complete', 37)])
+                self.assertEqual(page.value, 'toy')
 
     def test_writable_checkbox_and_single_select_keep_their_action_paths(self):
         page = Page()
         self.edit(page, self.field('checkbox'))
         self.assertEqual([name for name, _ in page.calls],
                          ['locator', 'availability', 'begin', 'click', 'complete'])
+        self.assertIs(page.checked, True)
         page = Page()
+        page.value = 'A'
         self.edit(page, self.field('select'))
         self.assertEqual(page.calls[2:], [('begin', self.field('select')), ('focus', None),
                                          ('press', 'Home'), ('press', 'ArrowDown'),
                                          ('press', 'Enter'), ('complete', 37)])
+        self.assertEqual(page.value, 'B')
 
     def test_readonly_on_nontext_controls_is_unsupported_not_a_blocked_edit(self):
         for kind in ('checkbox', 'select'):
