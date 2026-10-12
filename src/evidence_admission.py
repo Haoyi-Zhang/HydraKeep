@@ -66,8 +66,11 @@ def admit_edits(trace, fields):
             require('eventValue' in event and typed_equal(event.get('node'), target['node'])
                     and typed_equal(event['eventValue'], target.get('value')),
                     'native value or physical target differs from snapshot')
-            if event.get('action') is not None:
-                require(type(event['action']) is int and active is not None
+            # The observer binds every native event for the active logical field.
+            # A missing binding must not hide a newer event from completion.
+            if ((active is not None and fid == active['field'])
+                    or event.get('action') is not None):
+                require(type(event.get('action')) is int and active is not None
                         and event['action'] == active['action'] and fid == active['field']
                         and typed_equal(target['node'], active['node']),
                         'native event belongs to another action or target')

@@ -47,7 +47,8 @@ def interpret_form(trace:list[dict[str,Any]], contracts:dict[str,dict[str,Any]],
         for fid,c in contracts.items():
             st=state[fid];fs=byid[fid]
             if len(fs)>1:unknown.append('ambiguous logical identity: '+fid);continue
-            if c.get('unavailable_until_hydration') and phase=='pre' and fs and not fs[0].get('disabled'):
+            if (c.get('unavailable_until_hydration') and phase=='pre' and fs
+                    and not (fs[0].get('disabled') or fs[0].get('readOnly'))):
                 fail(fid,'readiness',e,False)
             if st['active'] and (pending is None or typ=='consume'):
                 if not fs:fail(fid,'dom-loss',e,None)

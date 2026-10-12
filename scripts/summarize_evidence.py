@@ -2,7 +2,9 @@
 """Aggregate evidence families without conflating runs, receipts, or models."""
 from __future__ import annotations
 
+import argparse
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,7 +15,29 @@ def load(relative: str) -> dict:
     return json.loads((RESULTS / relative).read_text())
 
 
+def passing_tests_from_log(text: str) -> int:
+    """Read one completed, non-skipped unittest execution; never count discovery."""
+    matches = list(re.finditer(r"^Ran (\d+) tests? in [^\r\n]+\r?$", text, re.MULTILINE))
+    if len(matches) != 1 or text[matches[0].end():].strip() != "OK":
+        raise ValueError("provide exactly one completed successful unittest execution log")
+    tests = int(matches[0].group(1))
+    if tests == 0:
+        raise ValueError("the execution log contains no tests")
+    return tests
+
+
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--test-log', type=Path,
+                        help='Optional explicit executed-suite log; no current test count is inferred')
+    args = parser.parse_args()
+    runtime_tests = {}
+    if args.test_log is not None:
+        runtime_tests = {
+            'passing_tests': passing_tests_from_log(args.test_log.read_text()),
+            'unit_test_log': str(args.test_log),
+            'unit_test_scope': 'supplied execution log; source freshness is not inferred',
+        }
     phase = load("phase-grid/summary.json")
     native = load("native-integration/summary.json")
     transactions = load("transactions/summary.json")
@@ -84,7 +108,7 @@ def main() -> None:
             + typed["prefix_specification_disagreements"],
         },
         "semantic_witnesses": witnesses,
-        "passing_tests": 119,
+        **runtime_tests,
         "bibliography_entries": 73,
         "scope_notes": [
             "Smoke runs, generated model traces, compatibility reinterpretations, unavailable cells, and auxiliary InitRacer controls are excluded from primary totals.",

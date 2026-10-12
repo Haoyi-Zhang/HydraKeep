@@ -15,7 +15,17 @@ def edit(p,f):
  loc=p.locator('[data-hk-field="'+f['id']+'"]')
  if loc.count()==0:p.evaluate('(field)=>hk.emit("edit-absent",{field})',f['id']);return
  if loc.count()!=1:raise RuntimeError('ambiguous target')
+ if f['kind'] not in ('text','textarea','email','checkbox','select'):
+  raise RuntimeError('control is outside the native scalar profile')
  if not loc.is_enabled():p.evaluate('(field)=>hk.emit("edit-blocked",{field})',f['id']);return
+ target=loc.evaluate('(el)=>({readOnly:el.readOnly===true,multiple:el.multiple===true})')
+ if f['kind']=='select' and target['multiple']:
+  raise RuntimeError('multiple select is outside the native scalar profile')
+ if target['readOnly']:
+  # Do not interpret a reflected readonly flag as blocking checkbox/select.
+  if f['kind'] not in ('text','textarea','email'):
+   raise RuntimeError('readonly applicability is outside the native scalar profile')
+  p.evaluate('(field)=>hk.emit("edit-blocked",{field})',f['id']);return
  action=p.evaluate('(f)=>hk.beginEdit(f.id,f.edit)',f)
  if f['kind']=='checkbox':loc.click()
  elif f['kind']=='select':loc.focus();loc.press('Home');loc.press('ArrowDown');loc.press('Enter')
