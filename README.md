@@ -46,7 +46,9 @@ drift fail the analysis.
 Browser transaction rows first pass `src/evidence_admission.py`. Each completion
 must cite a fresh trusted native event from its own action-start record, with the
 same logical field, physical node and typed value. Consumption must precede
-dispatch, acknowledgment and receipt for each transaction. Evidence rejection
+dispatch, acknowledgment and receipt for each transaction. Physical-node IDs
+must be positive integers; repeated Boolean, float or string values do not become
+valid node identities by matching each other. Evidence rejection
 raises an error; it is not a preservation verdict. The incremental and prefix
 interpreters remain conditional semantic models and are not provenance validators.
 

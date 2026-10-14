@@ -57,6 +57,18 @@ class EvidenceAdmissionTests(unittest.TestCase):
             rows=trace(); rows[index][key]=value
             with self.assertRaises(ValueError):admit_browser_trace(rows,CONTRACT)
 
+    def test_consistently_malformed_node_identity_is_not_action_evidence(self):
+        for node in (True, False, 1.0, '1', 0, -1, None, [], {}):
+            with self.subTest(node=node):
+                rows=trace()
+                for event in rows:
+                    for item in event['fields']:
+                        item['node']=copy.deepcopy(node)
+                    if 'node' in event:
+                        event['node']=copy.deepcopy(node)
+                with self.assertRaisesRegex(ValueError, 'positive integer'):
+                    admit_browser_trace(rows,CONTRACT)
+
     def test_completion_sequence_cannot_name_a_different_event(self):
         rows = trace(); rows[2]['nativeSequence'] = 7
         with self.assertRaises(ValueError): admit_browser_trace(rows, CONTRACT)

@@ -47,7 +47,8 @@ def admit_edits(trace, fields):
         fid = event.get('field')
         require(fid in fields and fid in matches, 'missing action target')
         target = matches[fid]
-        require(target.get('node') is not None, 'missing physical node')
+        require(type(target.get('node')) is int and target['node'] > 0,
+                'physical node must be a positive integer')
         if kind == 'edit-start':
             action = event.get('action')
             require(type(action) is int and action > 0 and action not in actions
