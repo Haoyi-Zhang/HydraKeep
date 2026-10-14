@@ -114,3 +114,22 @@ controlled faults as newly discovered framework defects.
 
 Node.js 22 or newer is required for source-effect parsing.
 Browser reruns additionally require the pinned Playwright and runtime inputs.
+
+## Manuscript figures
+
+In the complete project, `scripts/paper_assets_phase_grid.py` regenerates
+the phase-grid tables and the existing Python vector figures from retained
+measurements. It requires the sibling `paper` directory, ReportLab, and
+the Linux Libertine Type-1 font supplied by TeX. Use TeX's `kpsewhich` on
+`PATH`, or pass `--font-root` with the TeX `fonts` directory:
+
+```sh
+python scripts/paper_assets_phase_grid.py --font-root /path/to/texmf-dist/fonts
+```
+
+The renderer embeds the same face used by the manuscript and rejects a
+missing font instead of substituting one. The ownership diagram remains
+an editable schematic. `scripts/paper_assets.py` regenerates legacy
+numeric tables without replacing the manuscript's statistical figures.
+The repository's portable orchestration tests use disposable invocation
+fixtures; they are separate from actual PDF rendering and font validation.
