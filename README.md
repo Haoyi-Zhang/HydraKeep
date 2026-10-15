@@ -22,6 +22,35 @@ consumer transactions to actual loopback receiver payloads.
   redistribution notices.  No browser executable or installed dependency tree
   is included.
 
+## Requirements and working directory
+
+Run the commands below from this `artifact/` directory. Use Python 3.12 and
+Node.js 22 or newer on `PATH`; the unit suite imports the Python Playwright
+drivers even when a test does not launch a browser:
+
+```sh
+python -m pip install -r requirements.txt
+```
+
+Native SSR/browser reruns additionally need the locked Node dependencies
+(`npm ci`) and a Chromium executable. Every retained runner selects an explicit
+executable rather than Playwright's default browser search. Set `CHROMIUM_PATH`
+to the executable you intend to evaluate; do not rely on the Linux defaults
+`/usr/bin/chromium` or `/tmp/hydrakeep-chromium` on Windows. For a newly installed
+Playwright browser, install it with `python -m playwright install chromium`, then
+obtain its path without launching it:
+
+```sh
+python -c "from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()"
+```
+
+Assign that path with `export CHROMIUM_PATH=/absolute/path/to/chromium` on POSIX
+or `$env:CHROMIUM_PATH = 'C:/absolute/path/to/chrome.exe'` in PowerShell. A different
+browser version is a replication, not the recorded Chromium 155.0.8059.39 run.
+`scripts/setup_browser.mjs` extracts a Linux-only binary and is not a Windows
+browser setup command. None of these installation/browser steps is needed to
+reanalyze the retained JSON records.
+
 ## Core checks
 
 ```sh
