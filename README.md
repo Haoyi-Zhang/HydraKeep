@@ -157,8 +157,11 @@ python scripts/paper_assets_phase_grid.py --font-root /path/to/texmf-dist/fonts
 ```
 
 The renderer embeds the same face used by the manuscript and rejects a
-missing font instead of substituting one. The ownership diagram remains
-an editable schematic. `scripts/paper_assets.py` regenerates legacy
+missing font instead of substituting one. The ownership diagram is generated directly by
+`plots/draw_ownership.py` as a vector PDF with embedded Matplotlib STIX fonts.
+The sibling `paper/build.py` regenerates it before an isolated TeX build;
+this diagram route requires Matplotlib and no TeX-backed plotting.
+Run `python plots/draw_ownership.py --output-dir ../paper/figures` to redraw it. `scripts/paper_assets.py` regenerates legacy
 numeric tables without replacing the manuscript's statistical figures.
 The repository's portable orchestration tests use disposable invocation
 fixtures; they are separate from actual PDF rendering and font validation.
